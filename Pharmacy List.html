@@ -1,57 +1,80 @@
 <!DOCTYPE html>
-<!--
-Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
-Click nbfs://nbhost/SystemFileSystem/Templates/ClientSide/html.html to edit this template
--->
 <html>
     <head>
         <title>Pharmacy List</title>
-        <link href="image/logo.jpg" rel="icon">
+        <link href="image/weblogo.png" alt="icon">
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="js/pharmacy list.js"></script>
+        <link rel="stylesheet" href="css/Pharmacy List style.css">
+        <link href="https://db.onlinewebfonts.com/c/04d799f9fc4bd0a0973b3331ff889f32?family=Schnyder+Cond+M+Light" rel="stylesheet">
+        <link href="https://db.onlinewebfonts.com/c/2d98f490df6dc039774b101701ce3aba?family=CircularStd-Book" rel="stylesheet">
     </head>
     <body>
-        <div>
-            <a href="Home.html"><img src="image/logo.jpg" width="200" height="150" alt="logo"></a>
+        <div class="headdiv">
+            <div class="logodiv">
+                <a href="Home.html"><img src="image/weblogo.png" width="40" height="40" alt="logo"></a>
+                <h3 class="logofont">&nbsp; CARE PLUS</h3>
+            </div>
+            <div class="navdiv">
+                <span onclick="openNav()" class="openbtn">&#9776;</span>
+            </div>
+            <div class="lrdiv">
+                <a href="Login.html" class="loginregister">Login</a>
+                <p>&emsp;</p>
+                <a href="Register.html" class="loginregister">Register</a>
+            </div>
         </div>
-        <div>
-            <a href="Health Product.html">Health Product</a>
-            <a href="Health Product.html">21 Century</a>
-            <a href="Health Product.html">Blackmores</a>
-            <a href="Health Product.html">Brands</a>
-            <a href="Health Product.html">Eurobio</a>
-            <a href="Health Product.html">Swisse</a>
-            <a href="Health Product.html">Vitahealth</a>
-            <a href="Health Product.html">Vitamode</a>
+        <div id="nav" class="overlay">
+            <span onclick="closeNav()" class="closebtn">&times;</span>
+            <div class="contentOverlay">
+                <div class="dropdown">
+                    <a href="javascript:void(0);" class="dropbtn">Health Product</a>
+                    <div class="dropdownContent">
+                        <a href="Health Product.html">21 Century</a>
+                        <a href="Health Product.html">Blackmores</a>
+                        <a href="Health Product.html">Brands</a>
+                        <a href="Health Product.html">Eurobio</a>
+                        <a href="Health Product.html">Swisse</a>
+                        <a href="Health Product.html">Vitahealth</a>
+                        <a href="Health Product.html">Vitamode</a>
+                    </div>
+                </div>
+
+                <a href="Medical Product.html">Medical Product</a>
+
+                <div class="dropdown">
+                    <a href="javascript:void(0);" class="dropbtn">Pharmacy List</a>
+                    <div class="dropdownContent">
+                        <a href="Pharmacy List.html">Perlis</a>
+                        <a href="Pharmacy List.html">Kedah</a>
+                        <a href="Pharmacy List.html">Penang</a>
+                        <a href="Pharmacy List.html">Perak</a>
+                        <a href="Pharmacy List.html">Selangor</a>
+                        <a href="Pharmacy List.html">Negeri Sembilan</a>
+                        <a href="Pharmacy List.html">Melaka</a>
+                        <a href="Pharmacy List.html">Kelantan</a>
+                        <a href="Pharmacy List.html">Terengganu</a>
+                        <a href="Pharmacy List.html">Pahang</a>
+                        <a href="Pharmacy List.html">Johor</a>
+                        <a href="Pharmacy List.html">Sabah</a>
+                        <a href="Pharmacy List.html">Sarawak</a>
+                    </div>
+                </div>
+
+                <a href="Booking Form.html">Booking Form</a><br>
+                <a href="Health Tips.html">Health Tips</a><br>
+                <a href="Account Details.html">Account Details</a><br>
+            </div>
         </div>
-        <a href="Medical Product.html">Medical Product</a>
-        <div>
-            <a href="Pharmacy List.html">Pharmacy List</a>
-            <a href="Pharmacy List.html">Perlis</a>
-            <a href="Pharmacy List.html">Kedah</a>
-            <a href="Pharmacy List.html">Penang</a>
-            <a href="Pharmacy List.html">Perak</a>
-            <a href="Pharmacy List.html">Selangor</a>
-            <a href="Pharmacy List.html">Negeri Sembilan</a>
-            <a href="Pharmacy List.html">Melaka</a>
-            <a href="Pharmacy List.html">Kelantan</a>
-            <a href="Pharmacy List.html">Terengganu</a>
-            <a href="Pharmacy List.html">Pahang</a>
-            <a href="Pharmacy List.html">Johor</a>
-            <a href="Pharmacy List.html">Sabah</a>
-            <a href="Pharmacy List.html">Sarawak</a>
+
+        <div class="headerimg">
+            <h2><strong>PHARMACY LIST</strong></h2>
         </div>
-        <a href="Booking Form.html">Booking Form</a><br>
-        <a href="Health Tips.html">Health Tips</a><br>
-        <a href="Account Details.html">Account Details</a><br>
-        <a href="Login.html">Login</a><br>
-        <a href="Register.html">Register</a>
-        
-        <h1>Pharmacy List</h1><br>
-        
+
         <h2>Perlis</h2>
         <div>
-            <img src="image/Myfirst Pharmacy.jpg" width="400" height="350" alt="logo">
+            <img src="image/pharmacy/Myfirst Pharmacy.jpg" width="400" height="350" alt="pharmacy">
         </div>
         <h3>Myfirst Pharmacy</h3>
         <p>
@@ -64,7 +87,7 @@ Click nbfs://nbhost/SystemFileSystem/Templates/ClientSide/html.html to edit this
         <div>
             <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15858.676702636498!2d100.2047824!3d6.4365192!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x304c99a891f20ce7%3A0xf04336d1d0414da2!2sMyfirst%20Pharmacy!5e0!3m2!1sen!2smy!4v1693980157822!5m2!1sen!2smy" width="300" height="200" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
         </div>
-        
+
         <h2 >Kedah</h2><br><br>
         <h2>Penang</h2><br><br>
         <h2>Perak</h2><br><br>
