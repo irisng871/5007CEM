@@ -1,0 +1,165 @@
+@import url(https://db.onlinewebfonts.com/c/04d799f9fc4bd0a0973b3331ff889f32?family=Schnyder+Cond+M+Light);
+@import url(https://db.onlinewebfonts.com/c/2d98f490df6dc039774b101701ce3aba?family=CircularStd-Book);
+
+@font-face {
+    font-family: "Schnyder Cond M Light";
+    src: url("https://db.onlinewebfonts.com/t/04d799f9fc4bd0a0973b3331ff889f32.eot");
+    src: url("https://db.onlinewebfonts.com/t/04d799f9fc4bd0a0973b3331ff889f32.eot?#iefix")format("embedded-opentype"),
+    url("https://db.onlinewebfonts.com/t/04d799f9fc4bd0a0973b3331ff889f32.woff2")format("woff2"),
+    url("https://db.onlinewebfonts.com/t/04d799f9fc4bd0a0973b3331ff889f32.woff")format("woff"),
+    url("https://db.onlinewebfonts.com/t/04d799f9fc4bd0a0973b3331ff889f32.ttf")format("truetype"),
+    url("https://db.onlinewebfonts.com/t/04d799f9fc4bd0a0973b3331ff889f32.svg#Schnyder Cond M Light")format("svg");
+}
+
+@font-face {
+    font-family: "CircularStd-Book";
+    src: url("https://db.onlinewebfonts.com/t/2d98f490df6dc039774b101701ce3aba.eot");
+    src: url("https://db.onlinewebfonts.com/t/2d98f490df6dc039774b101701ce3aba.eot?#iefix")format("embedded-opentype"),
+    url("https://db.onlinewebfonts.com/t/2d98f490df6dc039774b101701ce3aba.woff2")format("woff2"),
+    url("https://db.onlinewebfonts.com/t/2d98f490df6dc039774b101701ce3aba.woff")format("woff"),
+    url("https://db.onlinewebfonts.com/t/2d98f490df6dc039774b101701ce3aba.ttf")format("truetype"),
+    url("https://db.onlinewebfonts.com/t/2d98f490df6dc039774b101701ce3aba.svg#CircularStd-Book")format("svg");
+}
+
+body 
+{
+    font-family: "CircularStd-Book";
+    background-color: #F6F1EB;
+}
+
+h2
+{
+    font-family: "Schnyder Cond M Light";
+    font-size: 40px;
+    text-align: center;
+}
+
+.logofont
+{
+    font-family: "Schnyder Cond M Light";
+}
+
+.headerimg
+{
+    width: 100%;
+    background-image: url("https://wallpapers.com/images/featured/beige-aesthetic-desktop-40s6oorv60lwmj0s.jpg"); 
+    background-size: cover; 
+    background-position: center; 
+}
+
+.headerimg > h2
+{
+    font-family: "Schnyder Cond M Light";
+    font-size: 100px;
+    color: #FFFFFF;
+    text-align: center;
+    background-color: rgba(0,0,0,0.3); 
+	padding: 0.5em 0.5em; 
+}
+
+.headdiv
+{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logodiv
+{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.navdiv
+{
+    display: flex;
+    justify-content: center;
+}
+
+.loginregister
+{
+    text-decoration: none;
+    color: #000000;
+}
+
+.lrdiv
+{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding-right: 5px;
+}
+
+.openbtn
+{
+    font-size:30px;
+    cursor:pointer;
+}
+
+.overlay {
+    height: 0%;
+    width: 100%;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: rgb(0,0,0);
+    background-color: rgba(0,0,0, 0.9);
+    overflow-y: hidden;
+    transition: 0.5s;
+}
+
+.contentOverlay {
+    position: relative;
+    top: 25%;
+    width: 100%;
+    text-align: left;
+    margin-top: 30px;
+}
+
+.overlay a{
+    padding-left: 6px;
+    text-decoration: none;
+    font-size: 36px;
+    color: #818181;
+    transition: 0.3s;
+}
+
+.overlay a:hover, .overlay a:focus, .overlay .closebtn:hover {
+    color: #f1f1f1;
+}
+
+.overlay .closebtn {
+    position: absolute;
+    top: 10px;
+    right: 45px;
+    font-size: 60px;
+    color: #818181;
+}
+
+.dropbtn {
+    cursor: pointer;
+}
+
+.dropdownContent {
+    display: none;
+    position: absolute;
+    background-color: #000000;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    overflow-y: auto;
+    max-height: 370px; 
+}
+
+.dropdown:hover .dropdownContent {
+    display: block;
+}
+
+.dropdownContent a {
+    display: block;
+    padding: 10px;
+    white-space: nowrap; /* Prevent text wrapping */
+}
+
