@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Login</title>
+        <link href="image/weblogo.png" alt="icon">
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="js/login and register.js"></script>
+        <link rel="stylesheet" href="css/Login And Register style.css">
+        <link href="https://db.onlinewebfonts.com/c/04d799f9fc4bd0a0973b3331ff889f32?family=Schnyder+Cond+M+Light" rel="stylesheet">
+        <link href="https://db.onlinewebfonts.com/c/2d98f490df6dc039774b101701ce3aba?family=CircularStd-Book" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    </head>
+    <body>
+        <div class="cotn_principal">
+            <div class="cont_centrar">
+
+                <div class="cont_login">
+                    <div class="cont_info_log_register">
+                        <div class="col_md_login">
+                            <div class="cont_ba_opcitiy">
+                                <h2>LOGIN</h2>
+                                <button class="btn_login" onclick="change_to_login()">LOGIN INTO ACCOUNT</button>
+                            </div>
+                        </div>
+                        <div class="col_md_register">
+                            <div class="cont_ba_opcitiy">
+                                <h2>REGISTER</h2>
+                                <button class="btn_register" onclick="change_to_register()">REGISTER NEW ACCOUNT</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="cont_back_info">
+                        <div class="cont_img_back_grey">
+                            <img src="https://edge.mwallpapers.com/photos/celebrities/nature/mountain-landscape-4k-hd-desktop-wallpaper-for-4k-ultra-hd-tv-android-iphone-hd-wallpaper-background-downloadhd-wallpapers-desktop-background-android-iphone-1080p-4k-n81oy.jpg" alt="background image" />
+                        </div>
+
+                    </div>
+                    <div class="cont_forms" >
+                        <div class="cont_img_back_">
+                            <img src="https://edge.mwallpapers.com/photos/celebrities/nature/mountain-landscape-4k-hd-desktop-wallpaper-for-4k-ultra-hd-tv-android-iphone-hd-wallpaper-background-downloadhd-wallpapers-desktop-background-android-iphone-1080p-4k-n81oy.jpg" alt="background image" />
+                        </div>
+                        <div class="cont_form_login">
+                            <a href="#" onclick="hidden_login_and_register()" ><i class="material-icons">&#xE5C4;</i></a>
+                            <h2>LOGIN</h2>
+                            <input type="text" placeholder="Email" />
+                            <input type="password" placeholder="Password" />
+                            <button class="btn_login" onclick="change_to_login()">LOGIN</button>
+                        </div>
+
+                        <div class="cont_form_register">
+                            <a href="#" onclick="hidden_login_and_register()"><i class="material-icons">&#xE5C4;</i></a>
+                            <h2>REGISTER</h2>
+                            <input type="text" placeholder="Name" />
+                            <input type="text" placeholder="Birth Date" />
+                            <input type="password" placeholder="Identity Card Number (last 4 digit)" />
+                            <input type="password" placeholder="Contact Number" />
+                            <input type="password" placeholder="Email" />
+                            <input type="password" placeholder="Password" />
+                            <button class="btn_register" onclick="change_to_register()">Register</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

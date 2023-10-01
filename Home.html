@@ -9,6 +9,8 @@
         <link rel="stylesheet" href="css/Home style.css">
         <link href="https://db.onlinewebfonts.com/c/04d799f9fc4bd0a0973b3331ff889f32?family=Schnyder+Cond+M+Light" rel="stylesheet">
         <link href="https://db.onlinewebfonts.com/c/2d98f490df6dc039774b101701ce3aba?family=CircularStd-Book" rel="stylesheet">
+        <link href="https://db.onlinewebfonts.com/c/7d12ca843dd31fca4367d8f2fea2dc65?family=Emotional+Rescue" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Play" rel="stylesheet">
     </head> 
     <body>
         <div class="headdiv">
@@ -17,56 +19,59 @@
                 <h3 class="logofont">&nbsp; CARE PLUS</h3>
             </div>
             <div class="navdiv">
-                <span onclick="openNav()" class="openbtn">&#9776;</span>
+                <span onclick="openNav()" class="openbtn" id="openbtn">&#9776;</span>
             </div>
             <div class="lrdiv">
-                <a href="Login.html" class="loginregister">Login</a>
-                <p>&emsp;</p>
-                <a href="Register.html" class="loginregister">Register</a>
+                <a href="Login And Register.html" class="loginregister">Login/Register</a>
             </div>
         </div>
         <div id="nav" class="overlay">
-            <span onclick="closeNav()" class="closebtn">&times;</span>
-            <div class="contentOverlay">
-                <div class="dropdown">
-                    <a href="javascript:void(0);" class="dropbtn">Health Product</a>
-                    <div class="dropdownContent">
-                        <a href="Health Product.html">21 Century</a>
-                        <a href="Health Product.html">Blackmores</a>
-                        <a href="Health Product.html">Brands</a>
-                        <a href="Health Product.html">Eurobio</a>
-                        <a href="Health Product.html">Swisse</a>
-                        <a href="Health Product.html">Vitahealth</a>
-                        <a href="Health Product.html">Vitamode</a>
+            <span onclick="closeNav()" class="closebtn" id="closebtn">&times;</span>
+            <div class="imgmenu">
+                <img src="image/medicine.jpg" class="medicineimg" id="medicineimg" alt="medicine">
+                <div class="contentOverlay" id="contentOverlay">
+                    <div class="dropdown">
+                        <a href="#" class="dropbtn">Health Product</a>
+                        <div class="dropdownContent">
+                            <a href="Health Product.html?brand=21Century">21 Century</a>
+                            <a href="Health Product.html?brand=Blackmores">Blackmores</a>
+                            <a href="Health Product.html?brand=Brands">Brands</a>
+                            <a href="Health Product.html?brand=Eurobio">Eurobio</a>
+                            <a href="Health Product.html?brand=Swisse">Swisse</a>
+                            <a href="Health Product.html?brand=Vitahealth">Vitahealth</a>
+                            <a href="Health Product.html?brand=Vitamode">Vitamode</a>
+                        </div>
                     </div>
-                </div>
 
-                <a href="Medical Product.html">Medical Product</a>
+                    <a href="Medical Product.html">Medical Product</a>
 
-                <div class="dropdown">
-                    <a href="javascript:void(0);" class="dropbtn">Pharmacy List</a>
-                    <div class="dropdownContent">
-                        <a href="Pharmacy List.html">Perlis</a>
-                        <a href="Pharmacy List.html">Kedah</a>
-                        <a href="Pharmacy List.html">Penang</a>
-                        <a href="Pharmacy List.html">Perak</a>
-                        <a href="Pharmacy List.html">Selangor</a>
-                        <a href="Pharmacy List.html">Negeri Sembilan</a>
-                        <a href="Pharmacy List.html">Melaka</a>
-                        <a href="Pharmacy List.html">Kelantan</a>
-                        <a href="Pharmacy List.html">Terengganu</a>
-                        <a href="Pharmacy List.html">Pahang</a>
-                        <a href="Pharmacy List.html">Johor</a>
-                        <a href="Pharmacy List.html">Sabah</a>
-                        <a href="Pharmacy List.html">Sarawak</a>
+                    <div class="dropdown">
+                        <a href="#" class="dropbtn">Pharmacy List</a>
+                        <div class="dropdownContent">
+                            <a href="Pharmacy List.html?state=Perlis">Perlis</a>
+                            <a href="Pharmacy List.html?state=Kedah">Kedah</a>
+                            <a href="Pharmacy List.html?state=Penang">Penang</a>
+                            <a href="Pharmacy List.html?state=Perak">Perak</a>
+                            <a href="Pharmacy List.html?state=Selangor">Selangor</a>
+                            <a href="Pharmacy List.html?state=NegeriSembilan">Negeri Sembilan</a>
+                            <a href="Pharmacy List.html?state=Melaka">Melaka</a>
+                            <a href="Pharmacy List.html?state=Kelantan">Kelantan</a>
+                            <a href="Pharmacy List.html?state=Terengganu">Terengganu</a>
+                            <a href="Pharmacy List.html?state=Pahang">Pahang</a>
+                            <a href="Pharmacy List.html?state=Johor">Johor</a>
+                            <a href="Pharmacy List.html?state=Sabah">Sabah</a>
+                            <a href="Pharmacy List.html?state=Sarawak">Sarawak</a>
+                        </div>
                     </div>
-                </div>
 
-                <a href="Booking Form.html">Booking Form</a><br>
-                <a href="Health Tips.html">Health Tips</a><br>
-                <a href="Account Details.html">Account Details</a><br>
+                    <a href="Booking Form.html">Booking Form</a><br>
+                    <a href="Health Tips.html">Health Tips</a><br>
+                    <a href="Account Details.html">Account Details</a><br>
+                </div>
             </div>
+            <p class="slogan">By Your Health Side.</p>
         </div>
+        
 
         <div class="headerimg">
             <h2><strong>BRANDS STORY</strong></h2>
