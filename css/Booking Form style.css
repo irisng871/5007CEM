@@ -1,27 +1,38 @@
 @import url(https://db.onlinewebfonts.com/c/04d799f9fc4bd0a0973b3331ff889f32?family=Schnyder+Cond+M+Light);
 @import url(https://db.onlinewebfonts.com/c/2d98f490df6dc039774b101701ce3aba?family=CircularStd-Book);
+@import url(https://db.onlinewebfonts.com/c/7d12ca843dd31fca4367d8f2fea2dc65?family=Emotional+Rescue);
 
 @font-face {
     font-family: "Schnyder Cond M Light";
     src: url("https://db.onlinewebfonts.com/t/04d799f9fc4bd0a0973b3331ff889f32.eot");
     src: url("https://db.onlinewebfonts.com/t/04d799f9fc4bd0a0973b3331ff889f32.eot?#iefix")format("embedded-opentype"),
-    url("https://db.onlinewebfonts.com/t/04d799f9fc4bd0a0973b3331ff889f32.woff2")format("woff2"),
-    url("https://db.onlinewebfonts.com/t/04d799f9fc4bd0a0973b3331ff889f32.woff")format("woff"),
-    url("https://db.onlinewebfonts.com/t/04d799f9fc4bd0a0973b3331ff889f32.ttf")format("truetype"),
-    url("https://db.onlinewebfonts.com/t/04d799f9fc4bd0a0973b3331ff889f32.svg#Schnyder Cond M Light")format("svg");
+        url("https://db.onlinewebfonts.com/t/04d799f9fc4bd0a0973b3331ff889f32.woff2")format("woff2"),
+        url("https://db.onlinewebfonts.com/t/04d799f9fc4bd0a0973b3331ff889f32.woff")format("woff"),
+        url("https://db.onlinewebfonts.com/t/04d799f9fc4bd0a0973b3331ff889f32.ttf")format("truetype"),
+        url("https://db.onlinewebfonts.com/t/04d799f9fc4bd0a0973b3331ff889f32.svg#Schnyder Cond M Light")format("svg");
 }
 
 @font-face {
     font-family: "CircularStd-Book";
     src: url("https://db.onlinewebfonts.com/t/2d98f490df6dc039774b101701ce3aba.eot");
     src: url("https://db.onlinewebfonts.com/t/2d98f490df6dc039774b101701ce3aba.eot?#iefix")format("embedded-opentype"),
-    url("https://db.onlinewebfonts.com/t/2d98f490df6dc039774b101701ce3aba.woff2")format("woff2"),
-    url("https://db.onlinewebfonts.com/t/2d98f490df6dc039774b101701ce3aba.woff")format("woff"),
-    url("https://db.onlinewebfonts.com/t/2d98f490df6dc039774b101701ce3aba.ttf")format("truetype"),
-    url("https://db.onlinewebfonts.com/t/2d98f490df6dc039774b101701ce3aba.svg#CircularStd-Book")format("svg");
+        url("https://db.onlinewebfonts.com/t/2d98f490df6dc039774b101701ce3aba.woff2")format("woff2"),
+        url("https://db.onlinewebfonts.com/t/2d98f490df6dc039774b101701ce3aba.woff")format("woff"),
+        url("https://db.onlinewebfonts.com/t/2d98f490df6dc039774b101701ce3aba.ttf")format("truetype"),
+        url("https://db.onlinewebfonts.com/t/2d98f490df6dc039774b101701ce3aba.svg#CircularStd-Book")format("svg");
 }
 
-body 
+@font-face {
+    font-family: "Emotional Rescue";
+    src: url("https://db.onlinewebfonts.com/t/7d12ca843dd31fca4367d8f2fea2dc65.eot");
+    src: url("https://db.onlinewebfonts.com/t/7d12ca843dd31fca4367d8f2fea2dc65.eot?#iefix")format("embedded-opentype"),
+        url("https://db.onlinewebfonts.com/t/7d12ca843dd31fca4367d8f2fea2dc65.woff2")format("woff2"),
+        url("https://db.onlinewebfonts.com/t/7d12ca843dd31fca4367d8f2fea2dc65.woff")format("woff"),
+        url("https://db.onlinewebfonts.com/t/7d12ca843dd31fca4367d8f2fea2dc65.ttf")format("truetype"),
+        url("https://db.onlinewebfonts.com/t/7d12ca843dd31fca4367d8f2fea2dc65.svg#Emotional Rescue")format("svg");
+}
+
+body
 {
     font-family: "CircularStd-Book";
     background-color: #F6F1EB;
@@ -41,10 +52,10 @@ h2
 
 .headerimg
 {
-    width: 100%; 
-    background-image: url("https://wallpapers.com/images/featured/beige-aesthetic-desktop-40s6oorv60lwmj0s.jpg"); 
-    background-size: cover; 
-    background-position: center; 
+    width: 100%;
+    background-image: url("https://wallpapers.com/images/featured/beige-aesthetic-desktop-40s6oorv60lwmj0s.jpg");
+    background-size: cover;
+    background-position: center;
 }
 
 .headerimg > h2
@@ -53,8 +64,8 @@ h2
     font-size: 100px;
     color: #FFFFFF;
     text-align: center;
-    background-color: rgba(0,0,0,0.3); 
-	padding: 0.5em 0.5em; 
+    background-color: rgba(0,0,0,0.3);
+    padding: 0.5em 0.5em;
 }
 
 .headdiv
@@ -97,40 +108,98 @@ h2
     cursor:pointer;
 }
 
-.overlay {
+.overlay 
+{
     height: 0%;
     width: 100%;
     position: fixed;
     z-index: 1;
     top: 0;
     left: 0;
-    background-color: rgb(0,0,0);
-    background-color: rgba(0,0,0, 0.9);
+    background: linear-gradient(
+        to right,
+        #C1BFA9 0%,
+        #C1BFA9 40%,
+        rgba(0,0,0, 0.9) 40%,
+        rgba(0,0,0, 0.9) 100%
+        );
     overflow-y: hidden;
     transition: 0.5s;
 }
 
-.contentOverlay {
-    position: relative;
-    top: 25%;
-    width: 100%;
-    text-align: left;
-    margin-top: 30px;
+.contentOverlay > a , .dropdown
+{
+    font-family: "Schnyder Cond M Light";
 }
 
-.overlay a{
+.dropdown:hover:before, .contentOverlay > a:hover:before
+{
+    content: "→";
     padding-left: 6px;
     text-decoration: none;
-    font-size: 36px;
+    font-size: 60px;
+    color: #f1f1f1;
+    transition: 0.3s;
+}
+
+.imgmenu
+{
+    display: flex;
+    flex-direction: row;
+}
+
+.medicineimg
+{
+    width: 500px;
+    height: 600px;
+    padding-left: 50px;
+    padding-right: 50px;
+    padding-top: 30px;
+    animation: fadeIn cubic-bezier(0.22, 0.61, 0.36, 1) 5s;
+}
+@keyframes fadeIn
+{
+    0% {
+        opacity:0;
+    }
+    100% {
+        opacity:1;
+    }
+}
+
+.contentOverlay 
+{
+    position: relative;
+    margin-top: 8%;
+    margin-left: 4%;
+    animation: 3s slide-left;
+}
+@keyframes slide-left 
+{
+    from {
+        margin-left: 35%;
+    }
+    to {
+        margin-left: 4%;
+    }
+}
+
+.overlay a
+{
+    padding-left: 6px;
+    text-decoration: none;
+    font-size: 60px;
     color: #818181;
     transition: 0.3s;
 }
 
-.overlay a:hover, .overlay a:focus, .overlay .closebtn:hover {
+.overlay a:hover, .overlay a:focus, .overlay .closebtn:hover
+{
     color: #f1f1f1;
 }
 
-.overlay .closebtn {
+.overlay .closebtn
+{
     position: absolute;
     top: 10px;
     right: 45px;
@@ -138,28 +207,99 @@ h2
     color: #818181;
 }
 
-.dropbtn {
+.dropbtn
+{
     cursor: pointer;
 }
 
-.dropdownContent {
+.dropdownContent
+{
     display: none;
     position: absolute;
     background-color: #000000;
-    min-width: 160px;
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
     z-index: 1;
     overflow-y: auto;
-    max-height: 370px; 
+    max-height: 350px;
+    min-width: 250px;
 }
 
-.dropdown:hover .dropdownContent {
+.dropdown:hover .dropdownContent
+{
     display: block;
 }
 
-.dropdownContent a {
+.dropdownContent a
+{
     display: block;
     padding: 10px;
-    white-space: nowrap; /* Prevent text wrapping */
+    font-size: 34px;
+    white-space: nowrap;
 }
 
+.slogan
+{
+    font-family: "Emotional Rescue";
+    padding-top: 25px;
+    padding-left: 330px;
+}
+
+@media (max-width: 480px) {
+    .overlay 
+    {
+        background: rgba(0,0,0, 0.9);
+    }
+
+    .dropdown:hover:before, .contentOverlay > a:hover:before
+    {
+        font-size: 50px;
+    }
+
+    .medicineimg
+    {
+        display: none;
+    }
+
+    .contentOverlay 
+    {
+        margin-top: 50%;
+    }
+    @keyframes slide-left 
+    {
+        from {
+            margin-left: 25%;
+        }
+        to {
+            margin-left: 4%;
+        }
+    }
+
+    .overlay a
+    {
+        font-size: 50px;
+    }
+
+    .overlay .closebtn 
+    {
+        top: 5px;
+        right: 15px;
+        font-size: 50px;
+    }
+
+    .dropdownContent 
+    {
+        max-height: 250px;
+        min-width: 150px;
+    }
+
+    .dropdownContent a 
+    {
+        padding: 5px;
+        font-size: 25px;
+    }
+
+    .slogan
+    {
+        display: none;
+    }
+}
