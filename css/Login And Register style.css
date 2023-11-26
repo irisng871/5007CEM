@@ -141,8 +141,8 @@ h2
 
 .cont_forms_active_login {
     box-shadow: 1px 10px 30px -10px rgba(0, 0, 0, 0.5);
-    height: 580px;
-    top: -150px;
+    height: 670px;
+    top: -195px;
     left: 0px;
     -webkit-transition: all 0.5s;
     -moz-transition: all 0.5s;
@@ -153,8 +153,8 @@ h2
 
 .cont_forms_active_register {
     box-shadow: 1px 10px 30px -10px rgba(0, 0, 0, 0.5);
-    height: 580px;
-    top: -150px;
+    height: 670px;
+    top: -195px;
     left: 320px;
     -webkit-transition: all 0.5s;
     -moz-transition: all 0.5s;
@@ -190,7 +190,7 @@ h2
 }
 
 .cont_img_back_ > img {
-    width: 100%;
+    width: 120%;
     opacity: 0.3;
     animation-name: animar_fondo;
     animation-duration: 20s;
@@ -246,11 +246,11 @@ h2
 }
 
 .btn_login {
-    background-color: #26c6da;
+    background-color: #C1BFA9;
     border: none;
     padding: 10px;
     width: 200px;
-    border-radius: 3px;
+    border-radius: 40px;
     box-shadow: 1px 5px 20px -5px rgba(0, 0, 0, 0.4);
     color: #fff;
     margin-top: 10px;
@@ -284,11 +284,11 @@ h2
 }
 
 .btn_register {
-    background-color: #ef5350;
+    background-color: #C1BFA9;
     border: none;
     padding: 10px;
     width: 200px;
-    border-radius: 3px;
+    border-radius: 40px;
     box-shadow: 1px 5px 20px -5px rgba(0, 0, 0, 0.4);
     color: #fff;
     margin-top: 10px;
@@ -298,22 +298,26 @@ h2
     z-index: 2;
 }
 
+@keyframes animar_fondo {
+    from {
+        transform: scale(1) translate(0px);
+    }
+    to {
+        transform: scale(1.5) translate(50px);
+    }
+}
+
 @-webkit-keyframes animar_fondo {
     from {
         -webkit-transform: scale(1) translate(0px);
-        -moz-transform: scale(1) translate(0px);
-        -ms-transform: scale(1) translate(0px);
-        -o-transform: scale(1) translate(0px);
         transform: scale(1) translate(0px);
     }
     to {
         -webkit-transform: scale(1.5) translate(50px);
-        -moz-transform: scale(1.5) translate(50px);
-        -ms-transform: scale(1.5) translate(50px);
-        -o-transform: scale(1.5) translate(50px);
         transform: scale(1.5) translate(50px);
     }
 }
+
 @-o-keyframes identifier {
     from {
         -webkit-transform: scale(1);
@@ -379,6 +383,7 @@ h2
 }
 
 .cont_form_register {
+    left: 20px;
     position: absolute;
     float: left;
     opacity: 0;
@@ -392,11 +397,12 @@ h2
 
 .cont_form_register > input {
     text-align: left;
-    padding: 15px 5px;
+    padding: 15px 10px;
     margin-top: 20px;
     width: 260px;
     border: none;
     color: #757575;
+    border-radius: 40px;
 }
 
 .cont_form_register > h2 {
@@ -406,12 +412,13 @@ h2
 }
 
 .cont_form_login > input {
-    padding: 15px 5px;
+    padding: 15px 10px;
     margin-top: 20px;
     width: 260px;
     border: none;
     text-align: left;
     color: #757575;
+    border-radius: 40px;
 }
 
 .cont_form_login > h2 {
@@ -426,4 +433,92 @@ h2
     float: left;
     margin: 10px;
     margin-left: 30px;
+}
+
+.error {
+    padding-top: 1px;
+    padding-left: 19px;
+    color: red;
+    font-size: 12px;
+    text-align: left;
+}
+
+@media (max-width: 480px) {
+    body {
+        font-size: 14px;
+    }
+
+    h2 {
+        font-size: 30px;
+    }
+
+    .cont_login,
+    .cont_register {
+        width: 100%;
+    }
+
+    .cont_forms,
+    .cont_back_info {
+        width: 100%;
+        box-shadow: none;
+    }
+
+    .col_md_login,
+    .col_md_register {
+        width: 100%;
+    }
+
+    .cont_forms_active_login,
+    .cont_forms_active_register {
+        height: auto;
+        top: 0;
+    }
+
+    .cont_img_back_,
+    .cont_img_back_grey {
+        top: 0;
+        width: 100%;
+        left: 0;
+    }
+
+    .cont_info_log_register {
+        width: 100%;
+    }
+
+    .cont_form_login,
+    .cont_form_register {
+        width: 80%;
+        margin: 0 auto;
+        padding: 20px;
+        box-sizing: border-box;
+    }
+
+    .cont_form_login > h2,
+    .cont_form_register > h2 {
+        margin-top: 20px;
+    }
+
+    .cont_form_login > p,
+    .cont_form_register > p {
+        width: 100%;
+        margin-top: 10px;
+    }
+
+    .cont_form_login > input,
+    .cont_form_register > input {
+        width: calc(100% - 20px);
+        box-sizing: border-box;
+        margin-top: 10px;
+        padding: 10px;
+    }
+
+    .btn_login,
+    .btn_register {
+        width: calc(100% - 40px);
+        margin-top: 20px;
+        padding: 10px;
+        box-sizing: border-box;
+    }
+
+    /* Add any additional styles or overrides for small screens here */
 }

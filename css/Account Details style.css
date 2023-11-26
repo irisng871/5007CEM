@@ -104,6 +104,7 @@ h2
 
 .openbtn
 {
+    padding-left: 610px;
     font-size:30px;
     cursor:pointer;
 }
@@ -244,62 +245,112 @@ h2
     padding-left: 330px;
 }
 
-@media (max-width: 480px) {
-    .overlay 
-    {
-        background: rgba(0,0,0, 0.9);
+.search-container{
+    margin-left: auto;
+    border-radius: 30px;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: 0.8s;
+}
+
+.search-container:hover > .search-input{
+    width: 200px;
+}
+
+.search-container .search-btn .fas{
+    color: #000000;
+}
+
+.search-container .search-input{
+    background: transparent;
+    border: none;
+    outline:none;
+    width: 0px;
+    font-weight: 500;
+    font-size: 16px;
+    transition: 0.8s;
+}
+
+@keyframes hoverShake {
+  0% {transform: skew(0deg,0deg);}
+  25% {transform: skew(5deg, 5deg);}
+  75% {transform: skew(-5deg, -5deg);}
+  100% {transform: skew(0deg,0deg);}
+}
+
+.search-container:hover{
+  animation: hoverShake 0.15s linear 3;
+}
+
+@media only screen and (max-width: 480px) {
+    body {
+        font-size: 14px;
     }
 
-    .dropdown:hover:before, .contentOverlay > a:hover:before
-    {
-        font-size: 50px;
+    h2 {
+        font-size: 24px;
+        text-align: center;
     }
 
-    .medicineimg
-    {
+    .headdiv {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px;
+    }
+    
+    .logodiv {
+        margin-bottom: 10px;
+        padding-top: 10px;
+    }
+
+    .logofont {
         display: none;
     }
 
-    .contentOverlay 
-    {
+    .openbtn {
+        padding-left: 10px;
+        font-size: 20px;
+    }
+
+    .search-container:hover > .search-input{
+        width: 100px;
+    }
+
+    .overlay {
+        background: rgba(0, 0, 0, 0.9);
+    }
+
+    .overlay .closebtn {
+        font-size: 40px;
+        right: 25px;
+    }
+
+    .overlay a{
+        padding-left: 1px;
+        text-decoration: none;
+        font-size: 50px;
+        color: #818181;
+        transition: 0.3s;
+    }
+
+    .contentOverlay {
         margin-top: 50%;
     }
-    @keyframes slide-left 
-    {
-        from {
-            margin-left: 25%;
-        }
-        to {
-            margin-left: 4%;
-        }
+
+    .imgmenu {
+        flex-direction: column;
+        align-items: center;
     }
 
-    .overlay a
-    {
-        font-size: 50px;
+    .medicineimg {
+        display: none;
     }
 
-    .overlay .closebtn 
-    {
-        top: 5px;
-        right: 15px;
-        font-size: 50px;
-    }
-
-    .dropdownContent 
-    {
-        max-height: 250px;
-        min-width: 150px;
-    }
-
-    .dropdownContent a 
-    {
-        padding: 5px;
-        font-size: 25px;
-    }
-
-    .slogan
-    {
+    .slogan {
         display: none;
     }
 }

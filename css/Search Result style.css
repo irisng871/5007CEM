@@ -1,0 +1,479 @@
+@import url(https://db.onlinewebfonts.com/c/04d799f9fc4bd0a0973b3331ff889f32?family=Schnyder+Cond+M+Light);
+@import url(https://db.onlinewebfonts.com/c/2d98f490df6dc039774b101701ce3aba?family=CircularStd-Book);
+@import url(https://db.onlinewebfonts.com/c/7d12ca843dd31fca4367d8f2fea2dc65?family=Emotional+Rescue);
+
+@font-face {
+    font-family: "Schnyder Cond M Light";
+    src: url("https://db.onlinewebfonts.com/t/04d799f9fc4bd0a0973b3331ff889f32.eot");
+    src: url("https://db.onlinewebfonts.com/t/04d799f9fc4bd0a0973b3331ff889f32.eot?#iefix")format("embedded-opentype"),
+        url("https://db.onlinewebfonts.com/t/04d799f9fc4bd0a0973b3331ff889f32.woff2")format("woff2"),
+        url("https://db.onlinewebfonts.com/t/04d799f9fc4bd0a0973b3331ff889f32.woff")format("woff"),
+        url("https://db.onlinewebfonts.com/t/04d799f9fc4bd0a0973b3331ff889f32.ttf")format("truetype"),
+        url("https://db.onlinewebfonts.com/t/04d799f9fc4bd0a0973b3331ff889f32.svg#Schnyder Cond M Light")format("svg");
+}
+
+@font-face {
+    font-family: "CircularStd-Book";
+    src: url("https://db.onlinewebfonts.com/t/2d98f490df6dc039774b101701ce3aba.eot");
+    src: url("https://db.onlinewebfonts.com/t/2d98f490df6dc039774b101701ce3aba.eot?#iefix")format("embedded-opentype"),
+        url("https://db.onlinewebfonts.com/t/2d98f490df6dc039774b101701ce3aba.woff2")format("woff2"),
+        url("https://db.onlinewebfonts.com/t/2d98f490df6dc039774b101701ce3aba.woff")format("woff"),
+        url("https://db.onlinewebfonts.com/t/2d98f490df6dc039774b101701ce3aba.ttf")format("truetype"),
+        url("https://db.onlinewebfonts.com/t/2d98f490df6dc039774b101701ce3aba.svg#CircularStd-Book")format("svg");
+}
+
+@font-face {
+    font-family: "Emotional Rescue";
+    src: url("https://db.onlinewebfonts.com/t/7d12ca843dd31fca4367d8f2fea2dc65.eot");
+    src: url("https://db.onlinewebfonts.com/t/7d12ca843dd31fca4367d8f2fea2dc65.eot?#iefix")format("embedded-opentype"),
+        url("https://db.onlinewebfonts.com/t/7d12ca843dd31fca4367d8f2fea2dc65.woff2")format("woff2"),
+        url("https://db.onlinewebfonts.com/t/7d12ca843dd31fca4367d8f2fea2dc65.woff")format("woff"),
+        url("https://db.onlinewebfonts.com/t/7d12ca843dd31fca4367d8f2fea2dc65.ttf")format("truetype"),
+        url("https://db.onlinewebfonts.com/t/7d12ca843dd31fca4367d8f2fea2dc65.svg#Emotional Rescue")format("svg");
+}
+
+body
+{
+    font-family: "CircularStd-Book";
+    background-color: #e3ded5;
+}
+
+h2
+{
+    font-family: "Schnyder Cond M Light";
+    font-size: 40px;
+    text-align: center;
+}
+
+.logofont
+{
+    font-family: "Schnyder Cond M Light";
+}
+
+.headerimg
+{
+    width: 100%;
+    background-image: url("https://wallpapers.com/images/featured/beige-aesthetic-desktop-40s6oorv60lwmj0s.jpg");
+    background-size: cover;
+    background-position: center;
+}
+
+.headerimg > h2
+{
+    font-family: "Schnyder Cond M Light";
+    font-size: 100px;
+    color: #FFFFFF;
+    text-align: center;
+    background-color: rgba(0,0,0,0.3);
+    padding: 0.5em 0.5em;
+}
+
+.headdiv
+{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logodiv
+{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.navdiv
+{
+    display: flex;
+    justify-content: center;
+}
+
+.loginregister
+{
+    text-decoration: none;
+    color: #000000;
+}
+
+.lrdiv
+{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding-right: 5px;
+}
+
+.openbtn
+{
+    padding-left: 610px;
+    font-size:30px;
+    cursor:pointer;
+}
+
+.overlay 
+{
+    height: 0%;
+    width: 100%;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background: linear-gradient(
+        to right,
+        #C1BFA9 0%,
+        #C1BFA9 40%,
+        rgba(0,0,0, 0.9) 40%,
+        rgba(0,0,0, 0.9) 100%
+        );
+    overflow-y: hidden;
+    transition: 0.5s;
+}
+
+.contentOverlay > a , .dropdown
+{
+    font-family: "Schnyder Cond M Light";
+}
+
+.dropdown:hover:before, .contentOverlay > a:hover:before
+{
+    content: "→";
+    padding-left: 6px;
+    text-decoration: none;
+    font-size: 60px;
+    color: #f1f1f1;
+    transition: 0.3s;
+}
+
+.imgmenu
+{
+    display: flex;
+    flex-direction: row;
+}
+
+.medicineimg
+{
+    width: 500px;
+    height: 600px;
+    padding-left: 50px;
+    padding-right: 50px;
+    padding-top: 30px;
+    animation: fadeIn cubic-bezier(0.22, 0.61, 0.36, 1) 5s;
+}
+@keyframes fadeIn
+{
+    0% {
+        opacity:0;
+    }
+    100% {
+        opacity:1;
+    }
+}
+
+.contentOverlay 
+{
+    position: relative;
+    margin-top: 8%;
+    margin-left: 4%;
+    animation: 3s slide-left;
+}
+@keyframes slide-left 
+{
+    from {
+        margin-left: 35%;
+    }
+    to {
+        margin-left: 4%;
+    }
+}
+
+.overlay a
+{
+    padding-left: 6px;
+    text-decoration: none;
+    font-size: 60px;
+    color: #818181;
+    transition: 0.3s;
+}
+
+.overlay a:hover, .overlay a:focus, .overlay .closebtn:hover
+{
+    color: #f1f1f1;
+}
+
+.overlay .closebtn
+{
+    position: absolute;
+    top: 10px;
+    right: 45px;
+    font-size: 60px;
+    color: #818181;
+}
+
+.dropbtn
+{
+    cursor: pointer;
+}
+
+.dropdownContent
+{
+    display: none;
+    position: absolute;
+    background-color: #000000;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    overflow-y: auto;
+    max-height: 350px;
+    min-width: 250px;
+}
+
+.dropdown:hover .dropdownContent
+{
+    display: block;
+}
+
+.dropdownContent a
+{
+    display: block;
+    padding: 10px;
+    font-size: 34px;
+    white-space: nowrap;
+}
+
+.slogan
+{
+    font-family: "Emotional Rescue";
+    padding-top: 25px;
+    padding-left: 330px;
+}
+
+.main-container-wrapper {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+    flex-direction: row;
+}
+
+.main-container 
+{
+    background-color: #d3cbbc;
+    width: 400px;
+    border-radius: 10px;
+    padding: 10px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    margin-left: 30px;
+    margin-right: 30px;
+}
+
+.productHeader
+{
+    padding-left: 20px;
+}
+
+.hpimg {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+  
+.coll-header 
+{
+    padding: 8px;
+    cursor: pointer;
+    font-size: 20px;
+}
+
+.containerButton
+{
+    border: none;
+    background-color: #d3cbbc;
+    font-size: 20px;
+    margin-left: 3px;
+    margin-right: 3px;
+}
+  
+.coll-content 
+{
+    opacity: 0;
+    visibility: hidden;
+    box-shadow: 0px 0px 4px 0px rgba(15, 15, 15, 0.2);
+    display: flex;
+    flex-direction: column;
+    justify-self: center;
+    align-self: center;
+    max-height: 0px;
+    transition-property: max-height;
+    transition: 300ms ease-in;
+}
+
+.coll-item
+{
+    padding: 10px;
+}
+
+.fblink
+{
+    text-decoration: none;
+    color: #000000;
+}
+
+.sideMap
+{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.setWidth
+{
+    width: 610px;
+    height: 300px;
+}
+
+.search-container{
+    margin-left: auto;
+    border-radius: 30px;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: 0.8s;
+}
+
+.search-container:hover > .search-input{
+    width: 200px;
+}
+
+.search-container .search-btn .fas{
+    color: #000000;
+}
+
+.search-container .search-input{
+    background: transparent;
+    border: none;
+    outline:none;
+    width: 0px;
+    font-weight: 500;
+    font-size: 16px;
+    transition: 0.8s;
+}
+
+@keyframes hoverShake {
+  0% {transform: skew(0deg,0deg);}
+  25% {transform: skew(5deg, 5deg);}
+  75% {transform: skew(-5deg, -5deg);}
+  100% {transform: skew(0deg,0deg);}
+}
+
+.search-container:hover{
+  animation: hoverShake 0.15s linear 3;
+}
+
+@media only screen and (max-width: 480px) {
+    body {
+        font-size: 14px;
+    }
+
+    h2 {
+        font-size: 24px;
+        text-align: center;
+    }
+
+    .headdiv {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px;
+    }
+
+    .logodiv {
+        margin-bottom: 10px;
+        padding-top: 10px;
+    }
+
+    .logofont {
+        display: none;
+    }
+
+    .openbtn {
+        padding-left: 10px;
+        font-size: 20px;
+    }
+
+    .search-container:hover > .search-input{
+        width: 100px;
+    }
+
+    .overlay {
+        background: rgba(0, 0, 0, 0.9);
+    }
+
+    .overlay .closebtn {
+        font-size: 40px;
+        right: 25px;
+    }
+
+    .overlay a{
+        padding-left: 1px;
+        text-decoration: none;
+        font-size: 50px;
+        color: #818181;
+        transition: 0.3s;
+    }
+
+    .contentOverlay {
+        margin-top: 50%;
+    }
+
+    .imgmenu {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .medicineimg {
+        display: none;
+    }
+
+    .sideMap
+    {
+        display: flex;
+        flex-direction: column; 
+        justify-content: center;
+        align-items: center;
+        width: 90%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .sideMap:not(:last-child)::after 
+    {
+        content: '';
+        display: block;
+        margin: 20px auto;
+        width: 100%; 
+        border-bottom: 1px solid #000000;
+    }    
+
+    .setWidth
+    {
+        width: 100%;
+        height: auto;
+    }
+
+    .main-container-wrapper {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .main-container {
+        width: 80%;
+        margin: 15px;
+    }
+
+    .slogan {
+        display: none;
+    }
+}
