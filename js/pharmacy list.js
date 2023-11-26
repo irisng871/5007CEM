@@ -83,62 +83,30 @@ function scrollToSarawak() {
     div.scrollIntoView({ behavior: 'smooth' });
 }
 
-function geturl() {
-    console.log("run geturl");
-    try {
-        const urlParams = new URLSearchParams(window.location.search);
-        const state = urlParams.get('state');
+function performSearch() {
+    var searchInput = document.getElementById("searchInput").value;
+    
+    // Check if the search input is empty
+    if (searchInput.trim() === "") {
+        alert("Please enter any keyword to perform search");
+    } else {
+        redirectToSearch(searchInput);
+    }
+}
 
-        switch (state) {
-            case null:
-                console.log('no type found so do ntg');
-                break;
-            case 'Perlis':
-                scrollToPerlis();
-                break;
-            case 'Kedah':
-                scrollToKedah();
-                break;
-            case 'Penang':
-                scrollToPenang();
-                break;
-            case 'Perak':
-                scrollToPerak();
-                break;
-            case 'Selangor':
-                scrollToSelangor();
-                break;
-            case 'NegeriSembilan':
-                scrollToNegeriSembilan();
-                break;
-            case 'Melaka':
-                scrollToMelaka();
-                break;
-            case 'Kelantan':
-                scrollToKelantan();
-                break;
-            case 'Terengganu':
-                scrollToTerengganu();
-                break;
-            case 'Pahang':
-                scrollToPahang();
-                break;
-            case 'Johor':
-                scrollToJohor();
-                break;
-            case 'Sabah':
-                scrollToSabah();
-                break;
-            case 'Sarawak':
-                scrollToSarawak();
-                break;
-            default:
-                console.log('default case');
-                break;
+function handleSearchKeyPress(event) {
+    if (event.key === 'Enter') {
+        var searchInput = document.getElementById("searchInput").value;
+        
+        // Check if the search input is empty
+        if (searchInput.trim() === "") {
+            alert("Please enter any keyword to perform search.");
+        } else {
+            redirectToSearch(searchInput);
         }
     }
-    catch (error) {
-        console.log('geturl',error);
-    }
+}
 
+function redirectToSearch(searchInput) {
+    window.location.href = "http://localhost/5007CEM/public_html/Search%20Result.php?s=" + encodeURIComponent(searchInput);
 }

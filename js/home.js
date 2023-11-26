@@ -18,127 +18,45 @@ function closeNav() {
     document.getElementById("nav").style.height = "0%";
 }
 
-function scrollToPerlis() {
-    var div = document.getElementById("perlis");
-    div.scrollIntoView({ behavior: 'smooth' });
+function performSearch() {
+    var searchInput = document.getElementById("searchInput").value;
+    
+    // Check if the search input is empty
+    if (searchInput.trim() === "") {
+        alert("Please enter any keyword to perform search");
+    } else {
+        redirectToSearch(searchInput);
+    }
 }
 
-function scrollToKedah() {
-    var div = document.getElementById("kedah");
-    div.scrollIntoView({ behavior: 'smooth' });
-}
-
-function scrollToPenang() {
-    var div = document.getElementById("penang");
-    div.scrollIntoView({ behavior: 'smooth' });
-}
-
-function scrollToPerak() {
-    var div = document.getElementById("perak");
-    div.scrollIntoView({ behavior: 'smooth' });
-}
-
-function scrollToSelangor() {
-    var div = document.getElementById("selangor");
-    div.scrollIntoView({ behavior: 'smooth' });
-}
-
-function scrollToNegeriSembilan() {
-    var div = document.getElementById("negerisembilan");
-    div.scrollIntoView({ behavior: 'smooth' });
-}
-
-function scrollToMelaka() {
-    var div = document.getElementById("melaka");
-    div.scrollIntoView({ behavior: 'smooth' });
-}
-
-function scrollToKelantan() {
-    var div = document.getElementById("kelantan");
-    div.scrollIntoView({ behavior: 'smooth' });
-}
-
-function scrollToTerengganu() {
-    var div = document.getElementById("terengganu");
-    div.scrollIntoView({ behavior: 'smooth' });
-}
-
-function scrollToPahang() {
-    var div = document.getElementById("pahang");
-    div.scrollIntoView({ behavior: 'smooth' });
-}
-
-function scrollToJohor() {
-    var div = document.getElementById("johor");
-    div.scrollIntoView({ behavior: 'smooth' });
-}
-
-function scrollToSabah() {
-    var div = document.getElementById("sabah");
-    div.scrollIntoView({ behavior: 'smooth' });
-}
-
-function scrollToSarawak() {
-    var div = document.getElementById("sarawak");
-    div.scrollIntoView({ behavior: 'smooth' });
-}
-
-function getURLofState() {
-    console.log("run geturl");
-    try {
-        const urlParams = new URLSearchParams(window.location.search);
-        const state = urlParams.get('state');
-
-        switch (state) {
-            case null:
-                console.log('no type found so do ntg');
-                break;
-            case 'Perlis':
-                scrollToPerlis();
-                break;
-            case 'Kedah':
-                scrollToKedah();
-                break;
-            case 'Penang':
-                scrollToPenang();
-                break;
-            case 'Perak':
-                scrollToPerak();
-                break;
-            case 'Selangor':
-                scrollToSelangor();
-                break;
-            case 'NegeriSembilan':
-                scrollToNegeriSembilan();
-                break;
-            case 'Melaka':
-                scrollToMelaka();
-                break;
-            case 'Kelantan':
-                scrollToKelantan();
-                break;
-            case 'Terengganu':
-                scrollToTerengganu();
-                break;
-            case 'Pahang':
-                scrollToPahang();
-                break;
-            case 'Johor':
-                scrollToJohor();
-                break;
-            case 'Sabah':
-                scrollToSabah();
-                break;
-            case 'Sarawak':
-                scrollToSarawak();
-                break;
-            default:
-                console.log('default case');
-                break;
+function handleSearchKeyPress(event) {
+    if (event.key === 'Enter') {
+        var searchInput = document.getElementById("searchInput").value;
+        
+        // Check if the search input is empty
+        if (searchInput.trim() === "") {
+            alert("Please enter any keyword to perform search.");
+        } else {
+            redirectToSearch(searchInput);
         }
     }
-    catch (error) {
-        console.log('geturl',error);
-    }
-
 }
+
+function redirectToSearch(searchInput) {
+    window.location.href = "http://localhost/5007CEM/public_html/Search%20Result.php?s=" + encodeURIComponent(searchInput);
+}
+
+document.addEventListener("DOMContentLoaded", function() {
+  var swiper = new Swiper(".blog-slider", {
+    spaceBetween: 30,
+    effect: "fade",
+    loop: true,
+    mousewheel: {
+      invert: false
+    },
+    pagination: {
+      el: ".blog-slider__pagination",
+      clickable: true
+    }
+  });
+});
