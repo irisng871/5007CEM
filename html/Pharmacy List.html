@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Pharmacy List</title>
+        <link href="image/weblogo.png" alt="icon">
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="js/pharmacy list.js"></script>
+        <link rel="stylesheet" href="css/Pharmacy List style.css">
+        <link href="https://db.onlinewebfonts.com/c/04d799f9fc4bd0a0973b3331ff889f32?family=Schnyder+Cond+M+Light" rel="stylesheet">
+        <link href="https://db.onlinewebfonts.com/c/2d98f490df6dc039774b101701ce3aba?family=CircularStd-Book" rel="stylesheet">
+    </head>
+    <body>
+        <div class="headdiv">
+            <div class="logodiv">
+                <a href="Home.html"><img src="image/weblogo.png" width="40" height="40" alt="logo"></a>
+                <h3 class="logofont">&nbsp; CARE PLUS</h3>
+            </div>
+            <div class="navdiv">
+                <span onclick="openNav()" class="openbtn">&#9776;</span>
+            </div>
+            <div class="lrdiv">
+                <a href="Login And Register.html" class="loginregister">Login/Register</a>
+            </div>
+        </div>
+                <div id="nav" class="overlay">
+            <span onclick="closeNav()" class="closebtn" id="closebtn">&times;</span>
+            <div class="imgmenu">
+                <img src="image/medicine.jpg" class="medicineimg" id="medicineimg" alt="medicine">
+                <div class="contentOverlay" id="contentOverlay">
+                    <div class="dropdown">
+                        <a href="javascript:void(0);" class="dropbtn">Health Product</a>
+                        <div class="dropdownContent">
+                            <a href="Health Product.html">21 Century</a>
+                            <a href="Health Product.html">Blackmores</a>
+                            <a href="Health Product.html">Brands</a>
+                            <a href="Health Product.html">Eurobio</a>
+                            <a href="Health Product.html">Swisse</a>
+                            <a href="Health Product.html">Vitahealth</a>
+                            <a href="Health Product.html">Vitamode</a>
+                        </div>
+                    </div>
+
+                    <a href="Medical Product.html">Medical Product</a>
+
+                    <div class="dropdown">
+                        <a href="javascript:void(0);" class="dropbtn">Pharmacy List</a>
+                        <div class="dropdownContent">
+                            <a onclick="closeNav(); scrollToPerlis()">Perlis</a>
+                            <a onclick="closeNav(); scrollToKedah();">Kedah</a>
+                            <a onclick="closeNav(); scrollToPenang()">Penang</a>
+                            <a onclick="closeNav(); scrollToPerak()">Perak</a>
+                            <a onclick="closeNav(); scrollToSelangor()">Selangor</a>
+                            <a onclick="closeNav(); scrollToNegeriSembilan()">Negeri Sembilan</a>
+                            <a onclick="closeNav(); scrollToMelaka()">Melaka</a>
+                            <a onclick="closeNav(); scrollToKelantan()">Kelantan</a>
+                            <a onclick="closeNav(); scrollToTerengganu()">Terengganu</a>
+                            <a onclick="closeNav(); scrollToPahang()">Pahang</a>
+                            <a onclick="closeNav(); scrollToJohor()">Johor</a>
+                            <a onclick="closeNav(); scrollToSabah()">Sabah</a>
+                            <a onclick="closeNav(); scrollToSarawak()">Sarawak</a>
+                        </div>
+                    </div>
+
+                    <a href="Booking Form.html">Booking Form</a><br>
+                    <a href="Health Tips.html">Health Tips</a><br>
+                    <a href="Account Details.html">Account Details</a><br>
+                </div>
+            </div>
+            <p class="slogan">By Your Health Side.</p>
+        </div>
+
+        <div class="headerimg">
+            <h2><strong>PHARMACY LIST</strong></h2>
+        </div>
+
+        <div id="perlis"></div>
+        <h2>Perlis</h2>
+        <div>
+            <img src="image/pharmacy/Myfirst Pharmacy.jpg" width="400" height="350" alt="pharmacy">
+        </div>
+        <h3>Myfirst Pharmacy</h3>
+        <p>
+            &#128205; Pusat Perniagaan, Persiaran Dato' Ali, Kampung Sena, 01000 Kangar, Perlis<br><br>
+            &#9200; Monday - Saturday (10am - 10pm)<br>
+            &emsp;&nbsp; Sunday Closed<br><br>
+            &#128222; 04-970 5773<br><br>
+            <a href="https://www.facebook.com/myfirstpharmacy/"><img src="image/facebook.png" width="20" height="20"/></a><a href="https://www.facebook.com/myfirstpharmacy/" class="fblink">&nbsp; Myfirst Pharmacy</a>
+        </p>
+        <div>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15858.676702636498!2d100.2047824!3d6.4365192!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x304c99a891f20ce7%3A0xf04336d1d0414da2!2sMyfirst%20Pharmacy!5e0!3m2!1sen!2smy!4v1693980157822!5m2!1sen!2smy" width="300" height="200" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+
+        <div id="kedah"></div>
+        <h2>Kedah</h2><br><br>
+        
+        <div id="penang"></div>
+        <h2>Penang</h2><br><br>
+        
+        <div id="perak"></div>
+        <h2>Perak</h2><br><br>
+        
+        <div id="selangor"></div>
+        <h2>Selangor</h2><br><br>
+        
+        <div id="negerisembilan"></div>
+        <h2>Negeri Sembilan</h2><br><br>
+        
+        <div id="melaka"></div>
+        <h2>Melaka</h2><br><br>
+        
+        <div id="kelantan"></div>
+        <h2>Kelantan</h2><br><br>
+        
+        <div id="terengganu"></div>
+        <h2>Terengganu</h2><br><br>
+        
+        <div id="pahang"></div>
+        <h2>Pahang</h2><br><br>
+        
+        <div id="johor"></div>
+        <h2>Johor</h2><br><br>
+        
+        <div id="sabah"></div>
+        <h2>Sabah</h2><br><br>
+        
+        <div id="sarawak"></div>
+        <h2>Sarawak</h2>
+    </body>
+</html>

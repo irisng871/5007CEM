@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Booking Form</title>
+        <link href="image/weblogo.png" alt="icon">
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="js/booking form.js"></script>
+        <link rel="stylesheet" href="css/Booking Form style.css">
+        <link href="https://db.onlinewebfonts.com/c/04d799f9fc4bd0a0973b3331ff889f32?family=Schnyder+Cond+M+Light" rel="stylesheet">
+        <link href="https://db.onlinewebfonts.com/c/2d98f490df6dc039774b101701ce3aba?family=CircularStd-Book" rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Chivo:ital,wght@1,900&display=swap" rel="stylesheet">
+    </head>
+    <body>
+        <div class="headdiv">
+            <div class="logodiv">
+                <a href="Home.html"><img src="image/weblogo.png" width="40" height="40" alt="logo"></a>
+                <h3 class="logofont">&nbsp; CARE PLUS</h3>
+            </div>
+            <div class="navdiv">
+                <span onclick="openNav()" class="openbtn" id="openbtn">&#9776;</span>
+            </div>
+            <div class="lrdiv">
+                <a href="Login And Register.html" class="loginregister">Login/Register</a>
+            </div>
+        </div>
+        <div id="nav" class="overlay">
+            <span onclick="closeNav()" class="closebtn" id="closebtn">&times;</span>
+            <div class="imgmenu">
+                <img src="image/medicine.jpg" class="medicineimg" id="medicineimg" alt="medicine">
+                <div class="contentOverlay" id="contentOverlay">
+                    <div class="dropdown">
+                        <a href="#" class="dropbtn">Health Product</a>
+                        <div class="dropdownContent">
+                            <a href="Health Product.html?brand=21Century">21 Century</a>
+                            <a href="Health Product.html?brand=Blackmores">Blackmores</a>
+                            <a href="Health Product.html?brand=Brands">Brands</a>
+                            <a href="Health Product.html?brand=Eurobio">Eurobio</a>
+                            <a href="Health Product.html?brand=Swisse">Swisse</a>
+                            <a href="Health Product.html?brand=Vitahealth">Vitahealth</a>
+                            <a href="Health Product.html?brand=Vitamode">Vitamode</a>
+                        </div>
+                    </div>
+
+                    <a href="Medical Product.html">Medical Product</a>
+
+                    <div class="dropdown">
+                        <a href="#" class="dropbtn">Pharmacy List</a>
+                        <div class="dropdownContent">
+                            <a href="Pharmacy List.html?state=Perlis">Perlis</a>
+                            <a href="Pharmacy List.html?state=Kedah">Kedah</a>
+                            <a href="Pharmacy List.html?state=Penang">Penang</a>
+                            <a href="Pharmacy List.html?state=Perak">Perak</a>
+                            <a href="Pharmacy List.html?state=Selangor">Selangor</a>
+                            <a href="Pharmacy List.html?state=NegeriSembilan">Negeri Sembilan</a>
+                            <a href="Pharmacy List.html?state=Melaka">Melaka</a>
+                            <a href="Pharmacy List.html?state=Kelantan">Kelantan</a>
+                            <a href="Pharmacy List.html?state=Terengganu">Terengganu</a>
+                            <a href="Pharmacy List.html?state=Pahang">Pahang</a>
+                            <a href="Pharmacy List.html?state=Johor">Johor</a>
+                            <a href="Pharmacy List.html?state=Sabah">Sabah</a>
+                            <a href="Pharmacy List.html?state=Sarawak">Sarawak</a>
+                        </div>
+                    </div>
+
+                    <a href="Booking Form.html">Booking Form</a><br>
+                    <a href="Health Tips.html">Health Tips</a><br>
+                    <a href="Account Details.html">Account Details</a><br>
+                </div>
+            </div>
+            <p class="slogan">By Your Health Side.</p>
+        </div>
+
+        <div id="booking" class="section">
+            <div class="section-center">
+                <div class="container">
+                    <div class="row">
+                        <div class="booking-form">
+                            <div class="booking-bg">
+                                <div class="form-header">
+                                    <h2><strong>MAKE YOUR BOOKING</strong></h2>
+                                </div>
+                            </div>
+                            <form>
+                                <div class="row">
+                                    <div class="form-group">
+                                        <span class="form-label">Name</span><br>
+                                        <input type="text" id="name" name="name" class="form-control" required>
+                                    </div>
+                                    <div class="form-group">
+                                        <span class="form-label">Contact Number</span><br>
+                                        <input type="text" id="contactnum" name="contactnum" class="form-control" required>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="form-group">
+                                        <span class="form-label">Identity Card Number (last 4 digit)</span><br>
+                                        <input type="text" id="icnum" name="icnum" class="form-control" required>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="form-group">
+                                        <span class="form-label">State</span><br>
+                                        <select id="state" name="state" class="form-control">
+                                            <option>Perlis</option>
+                                            <option>Kedah</option>
+                                            <option>Penang</option>
+                                            <option>Perak</option>
+                                            <option>Selangor</option>
+                                            <option>Negeri Sembilan</option>
+                                            <option>Melaka</option>
+                                            <option>Kelantan</option>
+                                            <option>Terengganu</option>
+                                            <option>Pahang</option>
+                                            <option>Johor</option>
+                                            <option>Sabah</option>
+                                            <option>Sarawak</option>
+                                        </select>
+                                    </div>
+                                    <div class="form-group">
+                                        <span class="form-label">Pharmacy</span><br>
+                                        <select id="pharmacy" name="pharmacy" class="form-control">
+                                            <option>Myfirst Pharmacy</option>
+                                            <option>G Wellness Pharmacy</option>
+                                            <option>Farmasi Setia</option>
+
+                                            <option>Farmasi Teratai</option>
+                                            <option>BIG Pharmacy Arau</option>
+                                            <option>Farmasi Desa</option>
+
+                                            <option>Georgetown Pharmacy Bayan Baru</option>
+                                            <option>Alpro The Promanade</option>
+                                            <option>Farmasi Green River (Sungai Dua)</option>
+
+                                            <option>Imay Pharmacy Sdn Bhd</option>
+                                            <option>HTM Pharmacy Flagship Store (First Garden)</option>
+                                            <option>Farmasi Rapat</option>
+
+                                            <option>Sunway Multicare Pharmacy Bestari Jaya</option>
+                                            <option>V Pro Pharmacy Mayang</option>
+                                            <option>Well Smith Pharmacy</option>
+
+                                            <option>CARiNG Pharmacy Taipan Senawang, Seremban</option>
+                                            <option>AA Pharmacy Seremban</option>
+                                            <option>Farmasi Ai</option>
+
+                                            <option>Health Lane Family Pharmacy Melaka Cheng Baru</option>
+                                            <option>Farmasi Murni @ Ayer Keroh</option>
+                                            <option>Pink Pharmacy Melaka Pertam Jaya</option>
+
+                                            <option>Farmasi Cemerlang</option>
+                                            <option>eGrand Pharmacy</option>
+                                            <option>Farmasi Awana Kota Bharu</option>
+
+                                            <option>Farmasi Pro</option>
+                                            <option>Farmasi Sayang</option>
+                                            <option>Farmasi Lautan Sultanah Zainab</option>
+
+                                            <option>Pahang Pharmacy (Raub)</option>
+                                            <option>Pahang Pharmacy (Bentong)</option>
+                                            <option>Cameron Pharmacy</option>
+
+                                            <option>AM PM Pharmacy (Taman Century)</option>
+                                            <option>New Life Pharmacy</option>
+                                            <option>Seyon Pharmacy Tampoi Indah</option>
+
+                                            <option>Sunlight Pharmacy KK (Jalan Pantai Outlet)</option>
+                                            <option>Public Chemist Pharmacy</option>
+                                            <option>UMH Pharmacy Sdn. Bhd.</option>
+
+                                            <option>Sing Lee Pharmacy</option>
+                                            <option>Central Park Pharmacy</option>
+                                            <option>Ting Pharmacy</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="form-group">
+                                        <span class="form-label">Date</span><br>
+                                        <input type="date" id="date" name="date" class="form-control" required>
+                                    </div>
+                                    <div class="form-group">
+                                        <span class="form-label">Time</span><br>
+                                        <input type="time" id="time" name="time" class="form-control" required>
+                                    </div>
+                                </div>
+                                <div class="form-btn">
+                                    <button class="submit-btn">BOOK NOW</button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
