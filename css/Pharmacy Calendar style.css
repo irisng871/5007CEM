@@ -1,0 +1,140 @@
+@import url(https://db.onlinewebfonts.com/c/04d799f9fc4bd0a0973b3331ff889f32?family=Schnyder+Cond+M+Light);
+@import url(https://db.onlinewebfonts.com/c/2d98f490df6dc039774b101701ce3aba?family=CircularStd-Book);
+@import url(https://db.onlinewebfonts.com/c/7d12ca843dd31fca4367d8f2fea2dc65?family=Emotional+Rescue);
+
+@font-face {
+    font-family: "Schnyder Cond M Light";
+    src: url("https://db.onlinewebfonts.com/t/04d799f9fc4bd0a0973b3331ff889f32.eot");
+    src: url("https://db.onlinewebfonts.com/t/04d799f9fc4bd0a0973b3331ff889f32.eot?#iefix")format("embedded-opentype"),
+        url("https://db.onlinewebfonts.com/t/04d799f9fc4bd0a0973b3331ff889f32.woff2")format("woff2"),
+        url("https://db.onlinewebfonts.com/t/04d799f9fc4bd0a0973b3331ff889f32.woff")format("woff"),
+        url("https://db.onlinewebfonts.com/t/04d799f9fc4bd0a0973b3331ff889f32.ttf")format("truetype"),
+        url("https://db.onlinewebfonts.com/t/04d799f9fc4bd0a0973b3331ff889f32.svg#Schnyder Cond M Light")format("svg");
+}
+
+@font-face {
+    font-family: "CircularStd-Book";
+    src: url("https://db.onlinewebfonts.com/t/2d98f490df6dc039774b101701ce3aba.eot");
+    src: url("https://db.onlinewebfonts.com/t/2d98f490df6dc039774b101701ce3aba.eot?#iefix")format("embedded-opentype"),
+        url("https://db.onlinewebfonts.com/t/2d98f490df6dc039774b101701ce3aba.woff2")format("woff2"),
+        url("https://db.onlinewebfonts.com/t/2d98f490df6dc039774b101701ce3aba.woff")format("woff"),
+        url("https://db.onlinewebfonts.com/t/2d98f490df6dc039774b101701ce3aba.ttf")format("truetype"),
+        url("https://db.onlinewebfonts.com/t/2d98f490df6dc039774b101701ce3aba.svg#CircularStd-Book")format("svg");
+}
+
+@font-face {
+    font-family: "Emotional Rescue";
+    src: url("https://db.onlinewebfonts.com/t/7d12ca843dd31fca4367d8f2fea2dc65.eot");
+    src: url("https://db.onlinewebfonts.com/t/7d12ca843dd31fca4367d8f2fea2dc65.eot?#iefix")format("embedded-opentype"),
+        url("https://db.onlinewebfonts.com/t/7d12ca843dd31fca4367d8f2fea2dc65.woff2")format("woff2"),
+        url("https://db.onlinewebfonts.com/t/7d12ca843dd31fca4367d8f2fea2dc65.woff")format("woff"),
+        url("https://db.onlinewebfonts.com/t/7d12ca843dd31fca4367d8f2fea2dc65.ttf")format("truetype"),
+        url("https://db.onlinewebfonts.com/t/7d12ca843dd31fca4367d8f2fea2dc65.svg#Emotional Rescue")format("svg");
+}
+
+body
+{
+    font-family: "CircularStd-Book";
+    background-color: #e3ded5;
+}
+
+h2
+{
+    font-family: "Schnyder Cond M Light";
+    font-size: 40px;
+    text-align: center;
+}
+
+.logofont
+{
+    font-family: "Schnyder Cond M Light";
+}
+
+.headerimg
+{
+    width: 100%;
+    background-image: url("https://wallpapers.com/images/featured/beige-aesthetic-desktop-40s6oorv60lwmj0s.jpg");
+    background-size: cover;
+    background-position: center;
+}
+
+.headerimg > h2
+{
+    font-family: "Schnyder Cond M Light";
+    font-size: 100px;
+    color: #FFFFFF;
+    text-align: center;
+    background-color: rgba(0,0,0,0.3);
+    padding: 0.5em 0.5em;
+}
+
+.headdiv
+{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logodiv
+{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.loginregister
+{
+    padding-left: 1220px;
+    text-decoration: none;
+    color: #000000;
+}
+
+.lrdiv
+{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding-right: 5px;
+}
+
+.bookingphar-wrapper {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+    flex-direction: row;
+}
+
+.bookingphar
+{
+    background-color: #d3cbbc;
+    width: 600px;
+    border-radius: 10px;
+    padding: 10px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    margin-left: 30px;
+    margin-right: 30px;
+}
+
+@media only screen and (max-width: 480px) {
+    body {
+        font-size: 14px;
+    }
+
+    h2 {
+        font-size: 24px;
+        text-align: center;
+    }
+
+    .headdiv {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px;
+    }
+
+    .logodiv {
+        margin-bottom: 10px;
+        padding-top: 10px;
+    }
+}

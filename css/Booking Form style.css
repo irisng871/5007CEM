@@ -1,0 +1,560 @@
+@import url(https://db.onlinewebfonts.com/c/04d799f9fc4bd0a0973b3331ff889f32?family=Schnyder+Cond+M+Light);
+@import url(https://db.onlinewebfonts.com/c/2d98f490df6dc039774b101701ce3aba?family=CircularStd-Book);
+@import url(https://db.onlinewebfonts.com/c/7d12ca843dd31fca4367d8f2fea2dc65?family=Emotional+Rescue);
+
+@font-face {
+    font-family: "Schnyder Cond M Light";
+    src: url("https://db.onlinewebfonts.com/t/04d799f9fc4bd0a0973b3331ff889f32.eot");
+    src: url("https://db.onlinewebfonts.com/t/04d799f9fc4bd0a0973b3331ff889f32.eot?#iefix")format("embedded-opentype"),
+        url("https://db.onlinewebfonts.com/t/04d799f9fc4bd0a0973b3331ff889f32.woff2")format("woff2"),
+        url("https://db.onlinewebfonts.com/t/04d799f9fc4bd0a0973b3331ff889f32.woff")format("woff"),
+        url("https://db.onlinewebfonts.com/t/04d799f9fc4bd0a0973b3331ff889f32.ttf")format("truetype"),
+        url("https://db.onlinewebfonts.com/t/04d799f9fc4bd0a0973b3331ff889f32.svg#Schnyder Cond M Light")format("svg");
+}
+
+@font-face {
+    font-family: "CircularStd-Book";
+    src: url("https://db.onlinewebfonts.com/t/2d98f490df6dc039774b101701ce3aba.eot");
+    src: url("https://db.onlinewebfonts.com/t/2d98f490df6dc039774b101701ce3aba.eot?#iefix")format("embedded-opentype"),
+        url("https://db.onlinewebfonts.com/t/2d98f490df6dc039774b101701ce3aba.woff2")format("woff2"),
+        url("https://db.onlinewebfonts.com/t/2d98f490df6dc039774b101701ce3aba.woff")format("woff"),
+        url("https://db.onlinewebfonts.com/t/2d98f490df6dc039774b101701ce3aba.ttf")format("truetype"),
+        url("https://db.onlinewebfonts.com/t/2d98f490df6dc039774b101701ce3aba.svg#CircularStd-Book")format("svg");
+}
+
+@font-face {
+    font-family: "Emotional Rescue";
+    src: url("https://db.onlinewebfonts.com/t/7d12ca843dd31fca4367d8f2fea2dc65.eot");
+    src: url("https://db.onlinewebfonts.com/t/7d12ca843dd31fca4367d8f2fea2dc65.eot?#iefix")format("embedded-opentype"),
+        url("https://db.onlinewebfonts.com/t/7d12ca843dd31fca4367d8f2fea2dc65.woff2")format("woff2"),
+        url("https://db.onlinewebfonts.com/t/7d12ca843dd31fca4367d8f2fea2dc65.woff")format("woff"),
+        url("https://db.onlinewebfonts.com/t/7d12ca843dd31fca4367d8f2fea2dc65.ttf")format("truetype"),
+        url("https://db.onlinewebfonts.com/t/7d12ca843dd31fca4367d8f2fea2dc65.svg#Emotional Rescue")format("svg");
+}
+
+body
+{
+    font-family: "CircularStd-Book";
+    background-color: #D7CDC3;
+}
+
+h2
+{
+    font-family: "Schnyder Cond M Light";
+    font-size: 40px;
+    text-align: center;
+}
+
+.logofont
+{
+    font-family: "Schnyder Cond M Light";
+}
+
+.headdiv
+{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #D7CDC3;
+}
+
+.logodiv
+{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.navdiv
+{
+    display: flex;
+    justify-content: center;
+}
+
+.loginregister
+{
+    text-decoration: none;
+    color: #000000;
+}
+
+.lrdiv
+{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding-right: 5px;
+}
+
+.openbtn
+{
+    padding-left: 610px;
+    font-size:30px;
+    cursor:pointer;
+}
+
+.overlay
+{
+    height: 0%;
+    width: 100%;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background: linear-gradient(
+        to right,
+        #C1BFA9 0%,
+        #C1BFA9 40%,
+        rgba(0,0,0, 0.9) 40%,
+        rgba(0,0,0, 0.9) 100%
+        );
+    overflow-y: hidden;
+    transition: 0.5s;
+}
+
+.contentOverlay > a , .dropdown
+{
+    font-family: "Schnyder Cond M Light";
+}
+
+.dropdown:hover:before, .contentOverlay > a:hover:before
+{
+    content: "→";
+    padding-left: 6px;
+    text-decoration: none;
+    font-size: 60px;
+    color: #f1f1f1;
+    transition: 0.3s;
+}
+
+.imgmenu
+{
+    display: flex;
+    flex-direction: row;
+}
+
+.medicineimg
+{
+    width: 500px;
+    height: 600px;
+    padding-left: 50px;
+    padding-right: 50px;
+    padding-top: 30px;
+    animation: fadeIn cubic-bezier(0.22, 0.61, 0.36, 1) 5s;
+}
+@keyframes fadeIn
+{
+    0% {
+        opacity:0;
+    }
+    100% {
+        opacity:1;
+    }
+}
+
+.contentOverlay
+{
+    position: relative;
+    margin-top: 8%;
+    margin-left: 4%;
+    animation: 3s slide-left;
+}
+@keyframes slide-left
+{
+    from {
+        margin-left: 35%;
+    }
+    to {
+        margin-left: 4%;
+    }
+}
+
+.overlay a
+{
+    padding-left: 6px;
+    text-decoration: none;
+    font-size: 60px;
+    color: #818181;
+    transition: 0.3s;
+}
+
+.overlay a:hover, .overlay a:focus, .overlay .closebtn:hover
+{
+    color: #f1f1f1;
+}
+
+.overlay .closebtn
+{
+    position: absolute;
+    top: 10px;
+    right: 45px;
+    font-size: 60px;
+    color: #818181;
+}
+
+.dropbtn
+{
+    cursor: pointer;
+}
+
+.dropdownContent
+{
+    display: none;
+    position: absolute;
+    background-color: #000000;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    overflow-y: auto;
+    max-height: 350px;
+    min-width: 250px;
+}
+
+.dropdown:hover .dropdownContent
+{
+    display: block;
+}
+
+.dropdownContent a
+{
+    display: block;
+    padding: 10px;
+    font-size: 34px;
+    white-space: nowrap;
+}
+
+.slogan
+{
+    font-family: "Emotional Rescue";
+    padding-top: 25px;
+    padding-left: 330px;
+}
+
+.search-container{
+    margin-left: auto;
+    border-radius: 30px;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: 0.8s;
+}
+
+.search-container:hover > .search-input{
+    width: 200px;
+}
+
+.search-container .search-btn .fas{
+    color: #000000;
+}
+
+.search-container .search-input{
+    background: transparent;
+    border: none;
+    outline:none;
+    width: 0px;
+    font-weight: 500;
+    font-size: 16px;
+    transition: 0.8s;
+}
+
+@keyframes hoverShake {
+  0% {transform: skew(0deg,0deg);}
+  25% {transform: skew(5deg, 5deg);}
+  75% {transform: skew(-5deg, -5deg);}
+  100% {transform: skew(0deg,0deg);}
+}
+
+.search-container:hover{
+  animation: hoverShake 0.15s linear 3;
+}
+
+.section .section-center {
+    position: absolute;
+    top: 52%;
+    left: 0;
+    right: 0;
+    -webkit-transform: translateY(-50%);
+    transform: translateY(-50%);
+}
+
+#booking {
+    background-color: #D7CDC3;
+}
+
+.booking-form {
+    position: relative;
+    max-width: 1000px;
+    width: 100%;
+    margin: auto;
+    background: #fff;
+    border-radius: 6px;
+    -webkit-box-shadow: 0px 5px 10px -5px rgba(0, 0, 0, 0.1);
+    box-shadow: 0px 5px 10px -5px rgba(0, 0, 0, 0.1);
+}
+
+.booking-form .booking-bg {
+    position: absolute;
+    left: 25px;
+    top: -25px;
+    bottom: -25px;
+    width: 400px;
+    background-image: url('https://media.istockphoto.com/id/1198487217/vector/cartoon-pharmacist-woman-holding-big-pile-of-pills-isolated-female-doctor.jpg?s=612x612&w=0&k=20&c=lU3ppDjzLHxKFgryKtYcUfF2pDVPD0s7td4ztdh6tps=');
+    background-size: cover;
+    background-position: center;
+    padding: 25px;
+    border-radius: 6px;
+    -webkit-box-shadow: 0px 5px 10px -5px rgba(0, 0, 0, 0.1);
+    box-shadow: 0px 5px 10px -5px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+}
+
+.booking-form .booking-bg::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: 0;
+    background: rgba(133, 104, 73, 0.78);
+}
+
+.booking-form>form {
+    margin-left: 460px;
+    padding: 30px;
+}
+
+.booking-form .form-header {
+    margin-bottom: 30px;
+    margin-top: 60px;
+    position: relative;
+    z-index: 20;
+}
+
+.booking-form .form-header h2 {
+    font-family: 'Chivo', sans-serif;
+    font-size: 20px;
+    margin-left: 30px;
+    margin-bottom: 15px;
+    color: #fff;
+    writing-mode: vertical-lr;
+    text-orientation: upright;
+}
+
+.booking-form .form-header p {
+    color: #fff;
+    font-size: 18px;
+}
+
+.booking-form .form-group {
+    position: relative;
+    margin-bottom: 20px;
+}
+
+.row{
+    display: flex;
+}
+
+.booking-form .form-control {
+    background-color: #fff;
+    height: 40px;
+    width: 200px;
+    padding-left: 10px;
+    padding-right: 10px;
+    margin-left: 10px;
+    margin-right: 10px;
+    color: #151515;
+    border: 1px solid #e5e5e5;
+    font-size: 16px;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    border-radius: 40px;
+    -webkit-transition: 0.2s all;
+    transition: 0.2s all;
+}
+
+.booking-form .form-control::-webkit-input-placeholder {
+    color: #e5e5e5;
+}
+
+.booking-form .form-control:-ms-input-placeholder {
+    color: #e5e5e5;
+}
+
+.booking-form .form-control::placeholder {
+    color: #e5e5e5;
+}
+
+.booking-form .form-control:focus {
+    background: #f8f8f8;
+}
+
+.booking-form input[type="date"].form-control:invalid {
+    color: #e5e5e5;
+}
+
+.booking-form select.form-control {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+}
+
+.booking-form select.form-control:invalid {
+    color: #e5e5e5;
+}
+
+.booking-form select.form-control option {
+    color: #151515;
+}
+
+.booking-form .form-label {
+    color: #856849;
+    line-height: 24px;
+    height: 24px;
+    font-size: 14px;
+    font-weight: 400;
+    margin-left: 20px;
+}
+
+.booking-form .form-btn {
+    margin-top: 30px;
+}
+
+.booking-form .submit-btn {
+    display: block;
+    width: 100%;
+    color: #fff;
+    background-color: rgba(133, 104, 73, 0.9);
+    font-weight: 700;
+    font-size: 18px;
+    border: none;
+    border-radius: 40px;
+    height: 55px;
+    -webkit-transition: 0.2s all;
+    transition: 0.2s all;
+}
+
+.booking-form .submit-btn:hover,
+.booking-form .submit-btn:focus {
+    background-color: rgba(133, 104, 73, 1);
+}
+
+.error {
+    padding-top: 1px;
+    padding-left: 19px;
+    color: red;
+    font-size: 12px;
+    text-align: left;
+}
+
+@media only screen and (max-width: 480px) {
+    body {
+        font-size: 14px;
+    }
+
+    h2 {
+        font-size: 24px;
+        text-align: center;
+    }
+
+    .headdiv {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px;
+    }
+
+    .logodiv {
+        margin-bottom: 10px;
+        padding-top: 10px;
+    }
+
+    .logofont {
+        display: none;
+    }
+
+    .openbtn {
+        padding-left: 10px;
+        font-size: 20px;
+    }
+
+    .search-container:hover > .search-input{
+        width: 100px;
+    }
+
+    .overlay {
+        background: rgba(0, 0, 0, 0.9);
+    }
+
+    .overlay .closebtn {
+        font-size: 40px;
+        right: 25px;
+    }
+
+    .overlay a{
+        padding-left: 1px;
+        text-decoration: none;
+        font-size: 50px;
+        color: #818181;
+        transition: 0.3s;
+    }
+
+    .contentOverlay {
+        margin-top: 50%;
+    }
+
+    .imgmenu {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .medicineimg {
+        display: none;
+    }
+
+    .booking-form {
+        width: 90%;
+        margin: auto;
+        background: #fff;
+        border-radius: 6px;
+        -webkit-box-shadow: none;
+        box-shadow: none;
+    }
+
+    .booking-form .booking-bg {
+        display: none;
+    } 
+
+    .booking-form>form {
+        margin-left: 0;
+        padding: 15px;
+    }
+
+    .booking-form .form-header h2 {
+        font-size: 18px;
+        margin-left: 0;
+        margin-bottom: 15px;
+        writing-mode: horizontal-tb;
+        text-orientation: mixed;
+    }
+
+    .booking-form .form-control {
+        width: 85%;
+    }
+
+    .row {
+        flex-direction: column;
+    }
+
+    .form-btn {
+        margin-top: 10px;
+    }
+
+    .submit-btn {
+        height: 45px;
+        font-size: 16px;
+    }
+
+    .slogan {
+        display: none;
+    }
+}
