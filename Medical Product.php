@@ -124,17 +124,14 @@ if (isset($_SESSION['id'])) {
 
         <?php
         if ($dbc = mysqli_connect('localhost', 'root', '', 'careplusdb')) {
-            $sql = "SELECT name, image, ingredient, directions FROM medicalProduct";
+            $sql = "SELECT name, image, ingredient, directions, symptoms FROM medicalProduct";
             $result = mysqli_query($dbc, $sql);
 
-            // Counter to keep track of the main containers
             $counter = 0;
 
-            // Start the main container wrapper
             echo '<div class="main-container-wrapper">';
 
             while ($row = mysqli_fetch_assoc($result)) {
-                // Start a new main container
                 echo '<div class="main-container">';
 
                 // Display name
@@ -173,19 +170,27 @@ if (isset($_SESSION['id'])) {
                 echo '</div>';
                 echo '</div>';
 
-                // End the main container
+                // Display symptoms
+                echo '<div class="coll-container">';
+                echo '<div class="coll-header">';
+                echo '<button class="containerButton">+</button>';
+                echo '<b>Symptoms</b>';
+                echo '</div>';
+                echo '<div class="coll-content">';
+                echo '<div class="coll-item">';
+                echo "<p>{$row['symptoms']}</p>";
+                echo '</div>';
+                echo '</div>';
+                echo '</div>';
                 echo '</div>';
 
-                // Increment the counter
                 $counter++;
 
-                // If three main containers have been displayed, start a new row
                 if ($counter % 3 === 0) {
                     echo '</div><div class="main-container-wrapper">';
                 }
             }
 
-            // Close the last main container wrapper
             echo '</div>';
         }
         ?>

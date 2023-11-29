@@ -4,6 +4,9 @@ session_start();
 // If the logout button is clicked
 if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['logout'])) {
     unset($_SESSION['id']);
+
+    header("Location: home.php");
+    exit();
 }
 
 // Check if the user is already logged in
@@ -145,7 +148,6 @@ if (isset($_SESSION['id'])) {
                 echo "Error in query: " . mysqli_error($dbc);
             }
 
-            // Close the database connection
             mysqli_close($dbc);
         }
         ?>

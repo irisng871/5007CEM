@@ -129,14 +129,11 @@ if (isset($_SESSION['id'])) {
             $sql = "SELECT name, image, ingredient, directions FROM healthProduct WHERE category_id=1";
             $result = mysqli_query($dbc, $sql);
 
-            // Counter to keep track of the main containers
             $counter = 0;
 
-            // Start the main container wrapper
             echo '<div class="main-container-wrapper">';
 
             while ($row = mysqli_fetch_assoc($result)) {
-                // Start a new main container
                 echo '<div class="main-container">';
 
                 // Display name
@@ -175,19 +172,15 @@ if (isset($_SESSION['id'])) {
                 echo '</div>';
                 echo '</div>';
 
-                // End the main container
                 echo '</div>';
 
-                // Increment the counter
                 $counter++;
 
-                // If three main containers have been displayed, start a new row
                 if ($counter % 3 === 0) {
                     echo '</div><div class="main-container-wrapper">';
                 }
             }
 
-            // Close the last main container wrapper
             echo '</div>';
         }
         ?>
@@ -199,14 +192,11 @@ if (isset($_SESSION['id'])) {
             $sql = "SELECT name, image, ingredient, directions FROM healthProduct WHERE category_id=2";
             $result = mysqli_query($dbc, $sql);
 
-            // Counter to keep track of the main containers
             $counter = 0;
 
-            // Start the main container wrapper
             echo '<div class="main-container-wrapper">';
 
             while ($row = mysqli_fetch_assoc($result)) {
-                // Start a new main container
                 echo '<div class="main-container">';
 
                 // Display name
@@ -245,19 +235,15 @@ if (isset($_SESSION['id'])) {
                 echo '</div>';
                 echo '</div>';
 
-                // End the main container
                 echo '</div>';
 
-                // Increment the counter
                 $counter++;
 
-                // If three main containers have been displayed, start a new row
                 if ($counter % 3 === 0) {
                     echo '</div><div class="main-container-wrapper">';
                 }
             }
 
-            // Close the last main container wrapper
             echo '</div>';
         }
         ?>
@@ -269,14 +255,11 @@ if (isset($_SESSION['id'])) {
             $sql = "SELECT name, image, ingredient, directions FROM healthProduct WHERE category_id=3";
             $result = mysqli_query($dbc, $sql);
 
-            // Counter to keep track of the main containers
             $counter = 0;
 
-            // Start the main container wrapper
             echo '<div class="main-container-wrapper">';
 
             while ($row = mysqli_fetch_assoc($result)) {
-                // Start a new main container
                 echo '<div class="main-container">';
 
                 // Display name
@@ -315,19 +298,15 @@ if (isset($_SESSION['id'])) {
                 echo '</div>';
                 echo '</div>';
 
-                // End the main container
                 echo '</div>';
 
-                // Increment the counter
                 $counter++;
 
-                // If three main containers have been displayed, start a new row
                 if ($counter % 3 === 0) {
                     echo '</div><div class="main-container-wrapper">';
                 }
             }
 
-            // Close the last main container wrapper
             echo '</div>';
         }
         ?>
@@ -339,14 +318,11 @@ if (isset($_SESSION['id'])) {
             $sql = "SELECT name, image, ingredient, directions FROM healthProduct WHERE category_id=4";
             $result = mysqli_query($dbc, $sql);
 
-            // Counter to keep track of the main containers
             $counter = 0;
 
-            // Start the main container wrapper
             echo '<div class="main-container-wrapper">';
 
             while ($row = mysqli_fetch_assoc($result)) {
-                // Start a new main container
                 echo '<div class="main-container">';
 
                 // Display name
@@ -385,19 +361,15 @@ if (isset($_SESSION['id'])) {
                 echo '</div>';
                 echo '</div>';
 
-                // End the main container
                 echo '</div>';
 
-                // Increment the counter
                 $counter++;
 
-                // If three main containers have been displayed, start a new row
                 if ($counter % 3 === 0) {
                     echo '</div><div class="main-container-wrapper">';
                 }
             }
 
-            // Close the last main container wrapper
             echo '</div>';
         }
         ?>
@@ -409,14 +381,11 @@ if (isset($_SESSION['id'])) {
             $sql = "SELECT name, image, ingredient, directions FROM healthProduct WHERE category_id=5";
             $result = mysqli_query($dbc, $sql);
 
-            // Counter to keep track of the main containers
             $counter = 0;
 
-            // Start the main container wrapper
             echo '<div class="main-container-wrapper">';
 
             while ($row = mysqli_fetch_assoc($result)) {
-                // Start a new main container
                 echo '<div class="main-container">';
 
                 // Display name
@@ -455,19 +424,15 @@ if (isset($_SESSION['id'])) {
                 echo '</div>';
                 echo '</div>';
 
-                // End the main container
                 echo '</div>';
 
-                // Increment the counter
                 $counter++;
 
-                // If three main containers have been displayed, start a new row
                 if ($counter % 3 === 0) {
                     echo '</div><div class="main-container-wrapper">';
                 }
             }
 
-            // Close the last main container wrapper
             echo '</div>';
         }
         ?>
@@ -479,14 +444,11 @@ if (isset($_SESSION['id'])) {
             $sql = "SELECT name, image, ingredient, directions FROM healthProduct WHERE category_id=6";
             $result = mysqli_query($dbc, $sql);
 
-            // Counter to keep track of the main containers
             $counter = 0;
 
-            // Start the main container wrapper
             echo '<div class="main-container-wrapper">';
 
             while ($row = mysqli_fetch_assoc($result)) {
-                // Start a new main container
                 echo '<div class="main-container">';
 
                 // Display name
@@ -525,19 +487,15 @@ if (isset($_SESSION['id'])) {
                 echo '</div>';
                 echo '</div>';
 
-                // End the main container
                 echo '</div>';
 
-                // Increment the counter
                 $counter++;
 
-                // If three main containers have been displayed, start a new row
                 if ($counter % 3 === 0) {
                     echo '</div><div class="main-container-wrapper">';
                 }
             }
 
-            // Close the last main container wrapper
             echo '</div>';
         }
         ?>
@@ -549,14 +507,11 @@ if (isset($_SESSION['id'])) {
             $sql = "SELECT name, image, ingredient, directions FROM healthProduct WHERE category_id=7";
             $result = mysqli_query($dbc, $sql);
 
-            // Counter to keep track of the main containers
             $counter = 0;
 
-            // Start the main container wrapper
             echo '<div class="main-container-wrapper">';
 
             while ($row = mysqli_fetch_assoc($result)) {
-                // Start a new main container
                 echo '<div class="main-container">';
 
                 // Display name
@@ -595,19 +550,15 @@ if (isset($_SESSION['id'])) {
                 echo '</div>';
                 echo '</div>';
 
-                // End the main container
                 echo '</div>';
 
-                // Increment the counter
                 $counter++;
 
-                // If three main containers have been displayed, start a new row
                 if ($counter % 3 === 0) {
                     echo '</div><div class="main-container-wrapper">';
                 }
             }
 
-            // Close the last main container wrapper
             echo '</div>';
         }
         ?>

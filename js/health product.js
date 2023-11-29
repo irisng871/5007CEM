@@ -20,45 +20,45 @@ function closeNav() {
 
 function scrollTo21Century() {
     var div = document.getElementById("21century");
-    div.scrollIntoView({ behavior: 'smooth' });
+    div.scrollIntoView({behavior: 'smooth'});
 }
 
 function scrollToBlackmores() {
     var div = document.getElementById("blackmores");
-    div.scrollIntoView({ behavior: 'smooth' });
+    div.scrollIntoView({behavior: 'smooth'});
 }
 
 function scrollToBrands() {
     var div = document.getElementById("brands");
-    div.scrollIntoView({ behavior: 'smooth' });
+    div.scrollIntoView({behavior: 'smooth'});
 }
 
 function scrollToEurobio() {
     var div = document.getElementById("eurobio");
-    div.scrollIntoView({ behavior: 'smooth' });
+    div.scrollIntoView({behavior: 'smooth'});
 }
 
 function scrollToSwisse() {
     var div = document.getElementById("swisse");
-    div.scrollIntoView({ behavior: 'smooth' });
+    div.scrollIntoView({behavior: 'smooth'});
 }
 
 function scrollToVitahealth() {
     var div = document.getElementById("vitahealth");
-    div.scrollIntoView({ behavior: 'smooth' });
+    div.scrollIntoView({behavior: 'smooth'});
 }
 
 function scrollToVitamode() {
     var div = document.getElementById("johor");
-    div.scrollIntoView({ behavior: 'smooth' });
+    div.scrollIntoView({behavior: 'smooth'});
 }
 
-document.addEventListener("DOMContentLoaded", function() {
+document.addEventListener("DOMContentLoaded", function () {
     // Get all header elements
     let collapseHeaders = document.querySelectorAll('.coll-header');
-    
+
     // Iterate over each header
-    collapseHeaders.forEach(function(collapseHeader) {
+    collapseHeaders.forEach(function (collapseHeader) {
         // Get the corresponding content element for each header
         let collapseContent = collapseHeader.nextElementSibling;
 
@@ -83,12 +83,12 @@ document.addEventListener("DOMContentLoaded", function() {
     });
 });
 
-document.addEventListener("DOMContentLoaded", function() {
+document.addEventListener("DOMContentLoaded", function () {
     // Get all header elements
     let collapseHeaders = document.querySelectorAll('.coll-header');
-    
+
     // Iterate over each header
-    collapseHeaders.forEach(function(collapseHeader) {
+    collapseHeaders.forEach(function (collapseHeader) {
         // Get the corresponding content element for each header
         let collapseContent = collapseHeader.nextElementSibling;
 
@@ -112,7 +112,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
 function performSearch() {
     var searchInput = document.getElementById("searchInput").value;
-    
+
     // Check if the search input is empty
     if (searchInput.trim() === "") {
         alert("Please enter any keyword to perform search");
@@ -124,7 +124,7 @@ function performSearch() {
 function handleSearchKeyPress(event) {
     if (event.key === 'Enter') {
         var searchInput = document.getElementById("searchInput").value;
-        
+
         // Check if the search input is empty
         if (searchInput.trim() === "") {
             alert("Please enter any keyword to perform search.");

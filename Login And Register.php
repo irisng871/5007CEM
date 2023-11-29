@@ -1,9 +1,7 @@
 <?php
 session_start();
 
-// Check if the user is already logged in
 if (isset($_SESSION['id'])) {
-    // Redirect to the home page or any other page you want to show after login
     header('Location: Home.php');
     exit();
 }
@@ -24,7 +22,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['login'])) {
     if ($result) {
         $user = mysqli_fetch_assoc($result);
         if ($user) {
-            // Set the session variable upon successful login
             $_SESSION['id'] = $user['id'];
 
             // Check if the email domain is pharmacy.com
@@ -50,19 +47,16 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['login'])) {
     mysqli_close($dbc);
 }
 
-// Now, after the login process, you can retrieve the user information based on 'id'
 if (isset($_SESSION['id'])) {
     $user_id = $_SESSION['id'];
 
-    // Query to get user information based on 'id'
     $query = "SELECT * FROM user WHERE id = $user_id";
     $result = mysqli_query($dbc, $query);
 
     if ($result) {
         $user_info = mysqli_fetch_assoc($result);
         if ($user_info) {
-            // Now $user_info contains the information of the logged-in user
-            // You can use $user_info['id'], $user_info['name'], etc.
+            
         }
     }
 }
@@ -112,13 +106,17 @@ if (isset($_SESSION['id'])) {
                             <img src="https://c4.wallpaperflare.com/wallpaper/947/583/747/mountain-nature-hd-wallpapers-top-beautiful-desktop-nature-images-background-wallpaper-preview.jpg" alt="background image" />
                         </div>
 
-                        <form method="post" id="loginForm">
+                        <form onsubmit="return loginValidation(event)" method="post" id="loginForm">
                             <div class="cont_form_login">
                                 <a href="#" onclick="hidden_login_and_register()" ><i class="material-icons">&#xE5C4;</i></a>
                                 <h2>LOGIN</h2>
-                                <input type="text" name="email" placeholder="Email" />
-                                <input type="password" name="password" placeholder="Password" />
-                                <button class="btn_login" name="login">LOGIN</button>
+                                <input type="text" id="email" name="email" placeholder="Email" />
+                                <div id="loginEmailErr" class="loginError"></div>
+
+                                <input type="password" id="password" name="password" placeholder="Password" />
+                                <div id="loginPasswordErr" class="loginError"></div>
+
+                                <button class="btn_login" name="login" onclick="loginValidation()">LOGIN</button>
                             </div>
                         </form>
 
@@ -156,7 +154,7 @@ if (isset($_SESSION['id'])) {
                         }
                         ?>
 
-                        <form method="post" id="registrationForm">
+                        <form onsubmit="return validation(event)" method="post" id="registrationForm">
                             <div class="cont_form_register">
                                 <a href="#" onclick="hidden_login_and_register()"><i class="material-icons">&#xE5C4;</i></a>
                                 <h2>REGISTER</h2>

@@ -20,7 +20,7 @@ function closeNav() {
 
 function performSearch() {
     var searchInput = document.getElementById("searchInput").value;
-    
+
     // Check if the search input is empty
     if (searchInput.trim() === "") {
         alert("Please enter any keyword to perform search");
@@ -32,7 +32,7 @@ function performSearch() {
 function handleSearchKeyPress(event) {
     if (event.key === 'Enter') {
         var searchInput = document.getElementById("searchInput").value;
-        
+
         // Check if the search input is empty
         if (searchInput.trim() === "") {
             alert("Please enter any keyword to perform search.");

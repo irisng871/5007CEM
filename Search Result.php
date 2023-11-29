@@ -128,40 +128,33 @@ if (isset($_SESSION['id'])) {
         $pharmacyResultsFound = false;
 
         if ($dbc = mysqli_connect('localhost', 'root', '', 'careplusdb')) {
-            // Get the searched name from the URL parameter
             $searchedName = isset($_GET['s']) ? mysqli_real_escape_string($dbc, trim($_GET['s'])) : '';
 
-            // Construct the SQL query with the search condition for health products
             $healthProductSql = "SELECT name, image, ingredient, directions FROM healthProduct";
 
             if (!empty($searchedName)) {
                 $healthProductSql .= " WHERE LOWER(name) LIKE LOWER('%$searchedName%')";
             } else {
-                $healthProductSql .= " WHERE 1=0"; // This ensures that no results are returned
+                $healthProductSql .= " WHERE 1=0"; // Ensures that no results are returned
             }
 
-            // Add error handling
             $healthProductResult = mysqli_query($dbc, $healthProductSql);
 
             if (!$healthProductResult) {
                 die('Invalid query: ' . mysqli_error($dbc));
             }
 
-            // Check if any health product results are found
             $healthProductResultsFound = mysqli_num_rows($healthProductResult) > 0;
 
             if ($healthProductResultsFound) {
                 echo '<h2>Search Result</h2>';
                 echo '<h3 style="padding-left:30px;">Health Product</h3>';
 
-                // Counter to keep track of the main containers
                 $counter = 0;
 
-                // Start the main container wrapper
                 echo '<div class="main-container-wrapper">';
 
                 while ($row = mysqli_fetch_assoc($healthProductResult)) {
-                    // Start a new main container
                     echo '<div class="main-container">';
 
                     // Display name
@@ -201,54 +194,44 @@ if (isset($_SESSION['id'])) {
                     echo '</div>';
                     echo '</div>';
 
-                    // Increment the counter
                     $counter++;
 
-                    // If three main containers have been displayed, start a new row
                     if ($counter % 3 === 0) {
                         echo '</div><div class="main-container-wrapper">';
                     }
                 }
 
-                // Close the last main container wrapper
                 echo '</div>';
             }
         }
 
         if ($dbc = mysqli_connect('localhost', 'root', '', 'careplusdb')) {
-            // Get the searched name from the URL parameter
             $searchedName = isset($_GET['s']) ? mysqli_real_escape_string($dbc, trim($_GET['s'])) : '';
 
-            // Construct the SQL query with the search condition for medical products
-            $medicalProductSql = "SELECT name, image, ingredient, directions FROM medicalProduct";
+            $medicalProductSql = "SELECT name, image, ingredient, directions, symptoms FROM medicalProduct";
 
             if (!empty($searchedName)) {
                 $medicalProductSql .= " WHERE LOWER(name) LIKE LOWER('%$searchedName%')";
             } else {
-                $medicalProductSql .= " WHERE 1=0"; // This ensures that no results are returned
+                $medicalProductSql .= " WHERE 1=0";
             }
 
-            // Add error handling
             $medicalProductResult = mysqli_query($dbc, $medicalProductSql);
 
             if (!$medicalProductResult) {
                 die('Invalid query: ' . mysqli_error($dbc));
             }
 
-            // Check if any medical product results are found
             $medicalProductResultsFound = mysqli_num_rows($medicalProductResult) > 0;
 
             if ($medicalProductResultsFound) {
                 echo '<h3 style="padding-left:30px;">Medical Product</h3>';
 
-                // Counter to keep track of the main containers
                 $counter = 0;
 
-                // Start the main container wrapper
                 echo '<div class="main-container-wrapper">';
 
                 while ($row = mysqli_fetch_assoc($medicalProductResult)) {
-                    // Start a new main container
                     echo '<div class="main-container">';
 
                     // Display name
@@ -286,49 +269,56 @@ if (isset($_SESSION['id'])) {
                     echo '</div>';
                     echo '</div>';
                     echo '</div>';
+
+                    // Display directions
+                    echo '<div class="coll-container">';
+                    echo '<div class="coll-header">';
+                    echo '<button class="containerButton">+</button>';
+                    echo '<b>Symptoms</b>';
+                    echo '</div>';
+                    echo '<div class="coll-content">';
+                    echo '<div class="coll-item">';
+                    echo "<p>{$row['symptoms']}</p>";
+                    echo '</div>';
+                    echo '</div>';
+                    echo '</div>';
                     echo '</div>';
 
-                    // Increment the counter
                     $counter++;
 
-                    // If three main containers have been displayed, start a new row
                     if ($counter % 3 === 0) {
                         echo '</div><div class="main-container-wrapper">';
                     }
                 }
 
-                // Close the last main container wrapper
                 echo '</div>';
             }
         }
 
         if ($dbc = mysqli_connect('localhost', 'root', '', 'careplusdb')) {
-            // Get the searched pharmacy name from the URL parameter
             $searchedPharmacyName = isset($_GET['s']) ? mysqli_real_escape_string($dbc, trim($_GET['s'])) : '';
 
-            // Construct the SQL query with the search condition for pharmacies
             $pharmacySql = "SELECT image, name, address, operation_hour, contact, facebook, map FROM pharmacy";
 
             if (!empty($searchedPharmacyName)) {
                 $pharmacySql .= " WHERE LOWER(name) LIKE LOWER('%$searchedPharmacyName%')";
             } else {
-                $pharmacySql .= " WHERE 1=0"; // This ensures that no results are returned
+                $pharmacySql .= " WHERE 1=0";
             }
 
             $pharmacyResult = mysqli_query($dbc, $pharmacySql);
 
-            // Add error handling
             if (!$pharmacyResult) {
                 die('Invalid query: ' . mysqli_error($dbc));
             }
 
-            // Check if any pharmacy results are found
             $pharmacyResultsFound = mysqli_num_rows($pharmacyResult) > 0;
 
             $counter = 0;
 
             if ($pharmacyResultsFound) {
                 echo '<h3 style="padding-left:30px;">Pharmacy List</h3>';
+
                 // Display the pharmacy list
                 echo '<div class="sideMap">';
                 while ($row = mysqli_fetch_assoc($pharmacyResult)) {

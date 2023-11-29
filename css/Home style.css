@@ -50,24 +50,6 @@ h2
     font-family: "Schnyder Cond M Light";
 }
 
-.headerimg
-{
-    width: 100%;
-    background-image: url("https://wallpapers.com/images/featured/beige-aesthetic-desktop-40s6oorv60lwmj0s.jpg");
-    background-size: cover;
-    background-position: center;
-}
-
-.headerimg > h2
-{
-    font-family: "Schnyder Cond M Light";
-    font-size: 100px;
-    color: #FFFFFF;
-    text-align: center;
-    background-color: rgba(0,0,0,0.3);
-    padding: 0.5em 0.5em;
-}
-
 .headdiv
 {
     display: flex;
@@ -346,6 +328,7 @@ h2
     opacity: 0.2;
     transition: all 0.3s;
 }
+
 .blog-slider__pagination .swiper-pagination-bullet-active {
     opacity: 1;
     height: 30px;
@@ -432,14 +415,22 @@ h2
 }
 
 @keyframes hoverShake {
-  0% {transform: skew(0deg,0deg);}
-  25% {transform: skew(5deg, 5deg);}
-  75% {transform: skew(-5deg, -5deg);}
-  100% {transform: skew(0deg,0deg);}
+    0% {
+        transform: skew(0deg,0deg);
+    }
+    25% {
+        transform: skew(5deg, 5deg);
+    }
+    75% {
+        transform: skew(-5deg, -5deg);
+    }
+    100% {
+        transform: skew(0deg,0deg);
+    }
 }
 
 .search-container:hover{
-  animation: hoverShake 0.15s linear 3;
+    animation: hoverShake 0.15s linear 3;
 }
 
 @media only screen and (max-width: 480px) {

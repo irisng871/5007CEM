@@ -3,11 +3,9 @@ function openNav() {
     var contentOverlay = document.querySelector(".contentOverlay");
     var medicineImg = document.querySelector(".medicineimg");
 
-    // Clone the contentOverlay element, clone means separate copy of original
     var contentOverlayClone = contentOverlay.cloneNode(true);
     var medicineImgClone = medicineImg.cloneNode(true);
 
-    // Replace the original contentOverlay with the cloned element
     contentOverlay.parentNode.replaceChild(contentOverlayClone, contentOverlay);
     medicineImg.parentNode.replaceChild(medicineImgClone, medicineImg);
 
@@ -20,7 +18,7 @@ function closeNav() {
 
 function performSearch() {
     var searchInput = document.getElementById("searchInput").value;
-    
+
     // Check if the search input is empty
     if (searchInput.trim() === "") {
         alert("Please enter any keyword to perform search");
@@ -32,7 +30,7 @@ function performSearch() {
 function handleSearchKeyPress(event) {
     if (event.key === 'Enter') {
         var searchInput = document.getElementById("searchInput").value;
-        
+
         // Check if the search input is empty
         if (searchInput.trim() === "") {
             alert("Please enter any keyword to perform search.");
@@ -46,17 +44,17 @@ function redirectToSearch(searchInput) {
     window.location.href = "http://localhost/5007CEM/public_html/Search%20Result.php?s=" + encodeURIComponent(searchInput);
 }
 
-document.addEventListener("DOMContentLoaded", function() {
-  var swiper = new Swiper(".blog-slider", {
-    spaceBetween: 30,
-    effect: "fade",
-    loop: true,
-    mousewheel: {
-      invert: false
-    },
-    pagination: {
-      el: ".blog-slider__pagination",
-      clickable: true
-    }
-  });
+document.addEventListener("DOMContentLoaded", function () {
+    var swiper = new Swiper(".blog-slider", {
+        spaceBetween: 30,
+        effect: "fade",
+        loop: true,
+        mousewheel: {
+            invert: false
+        },
+        pagination: {
+            el: ".blog-slider__pagination",
+            clickable: true
+        }
+    });
 });

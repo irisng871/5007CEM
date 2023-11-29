@@ -4,6 +4,8 @@ session_start();
 // If the logout button is clicked
 if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['logout'])) {
     unset($_SESSION['id']);
+    header("Location: home.php");
+    exit();
 }
 
 // Check if the user is already logged in
@@ -14,13 +16,35 @@ if (isset($_SESSION['id'])) {
     if (isset($_SESSION['id'])) {
         $user_id = $_SESSION['id'];
 
+        if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['save'])) {
+            $newName = mysqli_real_escape_string($dbc, $_POST['name']);
+            $newContactNumber = mysqli_real_escape_string($dbc, $_POST['contact']);
+            $newPassword = mysqli_real_escape_string($dbc, $_POST['password']);
+
+            $updateQuery = "UPDATE user SET name='$newName', contact='$newContactNumber', password='$newPassword' WHERE id=$user_id";
+            $updateResult = mysqli_query($dbc, $updateQuery);
+
+            if ($updateResult) {
+                echo '<script>alert("Data updated successfully!");</script>';
+            } else {
+                echo '<script>alert("Error updating data: ' . mysqli_error($dbc) . '");</script>';
+            }
+        }
+
         $query = "SELECT * FROM user WHERE id = $user_id";
         $result = mysqli_query($dbc, $query);
 
         if ($result) {
             $user_info = mysqli_fetch_assoc($result);
             if ($user_info) {
-                
+                $userData = array(
+                    'name' => $user_info['name'],
+                    'birthDate' => $user_info['birth_date'],
+                    'icNumber' => $user_info['ic_number'],
+                    'contactNumber' => $user_info['contact'],
+                    'email' => $user_info['email'],
+                    'password' => $user_info['password']
+                );
             }
         }
     }
@@ -41,6 +65,20 @@ if (isset($_SESSION['id'])) {
         <link href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+        <script>
+            function setUserData() {
+                document.getElementById("name").value = "<?php echo $userData['name']; ?>";
+                document.getElementById("birthDate").value = "<?php echo $userData['birthDate']; ?>";
+                document.getElementById("icNumber").value = "<?php echo $userData['icNumber']; ?>";
+                document.getElementById("contactNumber").value = "<?php echo $userData['contactNumber']; ?>";
+                document.getElementById("email").value = "<?php echo $userData['email']; ?>";
+                document.getElementById("password").value = "<?php echo $userData['password']; ?>";
+            }
+
+            window.onload = setUserData;
+        </script>
+
     </head>
     <body>
         <div class="headdiv">
@@ -120,36 +158,59 @@ if (isset($_SESSION['id'])) {
             <p class="slogan">By Your Health Side.</p>
         </div>
 
-        <div class="headerimg">
-            <h2><strong>ACCOUNT DETAILS</strong></h2>
-        </div>
+        <div id="booking" class="section">
+            <div class="section-center">
+                <div class="container">
+                    <div class="row">
+                        <div class="booking-form">
+                            <div class="booking-bg">
+                                <div class="form-header">
+                                    <h2><strong>ACCOUNT DETAILS</strong></h2>
+                                </div>
+                            </div>
 
-        <div>
-            <label>Name:</label>
-            <input type="text" id="name" name="name" disabled/><br><br>
-        </div>
-        <div>
-            <label>Birth date:</label>
-            <input type="date" id="birthdate" name="birthdate" disabled/><br><br>
-        </div>
-        <div>
-            <label>Identity Card Number (last 4 digit):</label>
-            <input type="number" id="icnum" name="icnum" disabled/><br><br>
-        </div>
-        <div>
-            <label>Contact Number:</label>
-            <input type="text" id="contactnum" name="contactnum"><br><br>
-        </div>
-        <div>
-            <label>Email:</label>
-            <input type="text" id="email" name="email" disabled/><br><br>
-        </div>
-        <div>
-            <label>Password:</label>
-            <input type="text" id="password" name="password"><br><br>
-        </div>
-        <div>
-            <button id="savebtn" name="savebtn">SAVE</button>
+                            <form onsubmit="return validation(event)" method="post" id="accountDetails">
+                                <div class="row">
+                                    <div class="form-group">
+                                        <span class="form-label">Name</span><br>
+                                        <input type="text" id="name" name="name" class="form-control">
+                                        <div id="nameErr" class="error"></div>
+                                    </div>
+                                    <div class="form-group">
+                                        <span class="form-label">Birth Date</span><br>
+                                        <input type="text" id="birthDate" name="birth_date" class="form-control" style="background-color:#dbdbd5" disabled/>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="form-group">
+                                        <span class="form-label">Identity Card Number (last 4 digit)</span><br>
+                                        <input type="text" id="icNumber" name="ic_number" class="form-control" style="background-color:#dbdbd5" disabled/>
+                                    </div>
+                                    <div class="form-group">
+                                        <span class="form-label">Contact Number</span><br>
+                                        <input type="text" id="contactNumber" name="contact" class="form-control">
+                                        <div id="contactNumberErr" class="error"></div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="form-group">
+                                        <span class="form-label">Email</span><br>
+                                        <input type="text" id="email" name="email" class="form-control" style="background-color:#dbdbd5" disabled/>
+                                    </div>
+                                    <div class="form-group">
+                                        <span class="form-label">Password</span><br>
+                                        <input type="text" id="password" name="password" class="form-control">
+                                        <div id="passwordErr" class="error"></div>
+                                    </div>
+                                </div>
+                                <div class="form-btn">
+                                    <button class="submit-btn" name="save">SAVE</button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </body>
 </html>
