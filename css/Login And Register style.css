@@ -39,24 +39,6 @@ h2
     font-family: "Schnyder Cond M Light";
 }
 
-.headerimg
-{
-    width: 100%;
-    background-image: url("https://wallpapers.com/images/featured/beige-aesthetic-desktop-40s6oorv60lwmj0s.jpg");
-    background-size: cover;
-    background-position: center;
-}
-
-.headerimg > h2
-{
-    font-family: "Schnyder Cond M Light";
-    font-size: 100px;
-    color: #FFFFFF;
-    text-align: center;
-    background-color: rgba(0,0,0,0.3);
-    padding: 0.5em 0.5em;
-}
-
 .headdiv
 {
     display: flex;
@@ -437,7 +419,15 @@ h2
 
 .error {
     padding-top: 1px;
-    padding-left: 19px;
+    padding-left: 20px;
+    color: red;
+    font-size: 12px;
+    text-align: left;
+}
+
+.loginError {
+    padding-top: 1px;
+    padding-left: 40px;
     color: red;
     font-size: 12px;
     text-align: left;

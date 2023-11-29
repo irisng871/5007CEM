@@ -258,14 +258,22 @@ h2
 }
 
 @keyframes hoverShake {
-  0% {transform: skew(0deg,0deg);}
-  25% {transform: skew(5deg, 5deg);}
-  75% {transform: skew(-5deg, -5deg);}
-  100% {transform: skew(0deg,0deg);}
+    0% {
+        transform: skew(0deg,0deg);
+    }
+    25% {
+        transform: skew(5deg, 5deg);
+    }
+    75% {
+        transform: skew(-5deg, -5deg);
+    }
+    100% {
+        transform: skew(0deg,0deg);
+    }
 }
 
 .search-container:hover{
-  animation: hoverShake 0.15s linear 3;
+    animation: hoverShake 0.15s linear 3;
 }
 
 .section .section-center {
@@ -522,7 +530,7 @@ h2
 
     .booking-form .booking-bg {
         display: none;
-    } 
+    }
 
     .booking-form>form {
         margin-left: 0;

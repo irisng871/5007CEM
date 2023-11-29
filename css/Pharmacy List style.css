@@ -50,24 +50,6 @@ h2
     font-family: "Schnyder Cond M Light";
 }
 
-.headerimg
-{
-    width: 100%;
-    background-image: url("https://wallpapers.com/images/featured/beige-aesthetic-desktop-40s6oorv60lwmj0s.jpg");
-    background-size: cover;
-    background-position: center;
-}
-
-.headerimg > h2
-{
-    font-family: "Schnyder Cond M Light";
-    font-size: 100px;
-    color: #FFFFFF;
-    text-align: center;
-    background-color: rgba(0,0,0,0.3);
-    padding: 0.5em 0.5em;
-}
-
 .headdiv
 {
     display: flex;
@@ -109,7 +91,7 @@ h2
     cursor:pointer;
 }
 
-.overlay 
+.overlay
 {
     height: 0%;
     width: 100%;
@@ -168,14 +150,14 @@ h2
     }
 }
 
-.contentOverlay 
+.contentOverlay
 {
     position: relative;
     margin-top: 8%;
     margin-left: 4%;
     animation: 3s slide-left;
 }
-@keyframes slide-left 
+@keyframes slide-left
 {
     from {
         margin-left: 35%;
@@ -297,14 +279,22 @@ h2
 }
 
 @keyframes hoverShake {
-  0% {transform: skew(0deg,0deg);}
-  25% {transform: skew(5deg, 5deg);}
-  75% {transform: skew(-5deg, -5deg);}
-  100% {transform: skew(0deg,0deg);}
+    0% {
+        transform: skew(0deg,0deg);
+    }
+    25% {
+        transform: skew(5deg, 5deg);
+    }
+    75% {
+        transform: skew(-5deg, -5deg);
+    }
+    100% {
+        transform: skew(0deg,0deg);
+    }
 }
 
 .search-container:hover{
-  animation: hoverShake 0.15s linear 3;
+    animation: hoverShake 0.15s linear 3;
 }
 
 @media only screen and (max-width: 480px) {
@@ -375,7 +365,7 @@ h2
     .sideMap
     {
         display: flex;
-        flex-direction: column; 
+        flex-direction: column;
         justify-content: center;
         align-items: center;
         width: 90%;
@@ -383,14 +373,14 @@ h2
         margin-right: auto;
     }
 
-    .sideMap:not(:last-child)::after 
+    .sideMap:not(:last-child)::after
     {
         content: '';
         display: block;
         margin: 20px auto;
-        width: 100%; 
+        width: 100%;
         border-bottom: 1px solid #000000;
-    }    
+    }
 
     .setWidth
     {

@@ -50,24 +50,6 @@ h2
     font-family: "Schnyder Cond M Light";
 }
 
-.headerimg
-{
-    width: 100%;
-    background-image: url("https://wallpapers.com/images/featured/beige-aesthetic-desktop-40s6oorv60lwmj0s.jpg");
-    background-size: cover;
-    background-position: center;
-}
-
-.headerimg > h2
-{
-    font-family: "Schnyder Cond M Light";
-    font-size: 100px;
-    color: #FFFFFF;
-    text-align: center;
-    background-color: rgba(0,0,0,0.3);
-    padding: 0.5em 0.5em;
-}
-
 .headdiv
 {
     display: flex;
@@ -190,16 +172,16 @@ h2
 
     .bookingphar {
         background-color: #e3ded5;
-        width: 90%; 
+        width: 90%;
         border-radius: 10px;
-        padding: 20px;  
-        margin: 10px 0;  
-        box-sizing: border-box; 
+        padding: 20px;
+        margin: 10px 0;
+        box-sizing: border-box;
     }
 
     .loginregister {
-        padding-left: 0; 
-        text-align: center; 
+        padding-left: 0;
+        text-align: center;
     }
 
     .slogan {
