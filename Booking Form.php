@@ -153,7 +153,6 @@ if (isset($_SESSION['id'])) {
                                     $date = mysqli_real_escape_string($dbc, $date);
                                     $time = mysqli_real_escape_string($dbc, $time);
 
-                                    // Fetch user_id based on the provided IC number
                                     $userQuery = "SELECT id FROM user WHERE ic_number = '$ic_number'";
                                     $userResult = mysqli_query($dbc, $userQuery);
 
@@ -163,7 +162,6 @@ if (isset($_SESSION['id'])) {
                                         if ($userRow) {
                                             $userId = $userRow['id'];
 
-                                            // Fetch pharmacy_id based on the selected pharmacy
                                             $pharmacyQuery = "SELECT id FROM pharmacy WHERE name = '$pharmacy'";
                                             $pharmacyResult = mysqli_query($dbc, $pharmacyQuery);
 
@@ -173,7 +171,6 @@ if (isset($_SESSION['id'])) {
                                                 if ($pharmacyRow) {
                                                     $pharmacyId = $pharmacyRow['id'];
 
-                                                    // Insert booking into 'booking' table
                                                     $bookingQuery = "INSERT INTO booking (name, ic_number, contact, state, pharmacy, date, time, pharmacy_id, user_id) 
                                                                             VALUES ('$name', '$ic_number', '$contact', '$state', '$pharmacy', '$date', '$time', '$pharmacyId', '$userId')";
 
@@ -181,7 +178,6 @@ if (isset($_SESSION['id'])) {
                                                         // Get the last inserted booking ID
                                                         $lastBookingId = mysqli_insert_id($dbc);
 
-                                                        // Insert into 'availability' table with 'booking_id' (id will be auto-incremented)
                                                         $availabilityInsertQuery = "INSERT INTO availability (booking_id) VALUES ('$lastBookingId')";
 
                                                         if (mysqli_query($dbc, $availabilityInsertQuery)) {
@@ -212,8 +208,6 @@ if (isset($_SESSION['id'])) {
                                 }
                             }
                             ?>
-
-
 
                             <form onsubmit="return validation(event)" method="post" id="bookingForm">
                                 <div class="row">
