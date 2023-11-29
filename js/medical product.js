@@ -18,12 +18,12 @@ function closeNav() {
     document.getElementById("nav").style.height = "0%";
 }
 
-document.addEventListener("DOMContentLoaded", function() {
+document.addEventListener("DOMContentLoaded", function () {
     // Get all header elements
     let collapseHeaders = document.querySelectorAll('.coll-header');
-    
+
     // Iterate over each header
-    collapseHeaders.forEach(function(collapseHeader) {
+    collapseHeaders.forEach(function (collapseHeader) {
         // Get the corresponding content element for each header
         let collapseContent = collapseHeader.nextElementSibling;
 
@@ -48,12 +48,12 @@ document.addEventListener("DOMContentLoaded", function() {
     });
 });
 
-document.addEventListener("DOMContentLoaded", function() {
+document.addEventListener("DOMContentLoaded", function () {
     // Get all header elements
     let collapseHeaders = document.querySelectorAll('.coll-header');
-    
+
     // Iterate over each header
-    collapseHeaders.forEach(function(collapseHeader) {
+    collapseHeaders.forEach(function (collapseHeader) {
         // Get the corresponding content element for each header
         let collapseContent = collapseHeader.nextElementSibling;
 
@@ -77,7 +77,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
 function performSearch() {
     var searchInput = document.getElementById("searchInput").value;
-    
+
     // Check if the search input is empty
     if (searchInput.trim() === "") {
         alert("Please enter any keyword to perform search");
@@ -89,7 +89,7 @@ function performSearch() {
 function handleSearchKeyPress(event) {
     if (event.key === 'Enter') {
         var searchInput = document.getElementById("searchInput").value;
-        
+
         // Check if the search input is empty
         if (searchInput.trim() === "") {
             alert("Please enter any keyword to perform search.");

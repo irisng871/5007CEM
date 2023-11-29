@@ -66,12 +66,8 @@ async function validation(event) {
     var pharmacy = document.getElementById('pharmacy').value;
     var date = document.getElementById('date').value;
     var time = document.getElementById('time').value;
-    
-    //construct value form inputbox into json
-    var booking = { 'name': name, 'contactNumber': contactNumber, 'icNumber': icNumber,  'state': state, 'pharmacy': pharmacy, 'date': date, 'time': time} 
 
-    var nameErr  = contactNumberErr = icNumberErr = stateErr = pharmacyErr = dateErr = timeErr = true; // define error variables with a default value
-    //true means gt error and show error message
+    var nameErr = contactNumberErr = icNumberErr = stateErr = pharmacyErr = dateErr = timeErr = true; // define error variables with a default value
 
     // Validate name
     if (name === "") {
@@ -156,11 +152,9 @@ async function validation(event) {
         timeErr = false;
     }
 
-    if ((nameErr || contactNumberErr || icNumberErr || stateErr || pharmacyErr || dateErr || timeErr == true)) { // prevent the form submitted if thr are any errors
+    if ((nameErr || contactNumberErr || icNumberErr || stateErr || pharmacyErr || dateErr || timeErr == true)) {
         event.preventDefault();
         return false;
-    } else {
-        bookPharmacy();
     }
 }
 
@@ -207,7 +201,7 @@ function updatePharmacyOptions() {
             addPharmacyOption("CARiNG Pharmacy Taipan Senawang, Seremban");
             addPharmacyOption("AA Pharmacy Seremban");
             addPharmacyOption("Farmasi Ai");
-            break;        
+            break;
         case "Melaka":
             addPharmacyOption("Health Lane Family Pharmacy Melaka Cheng Baru");
             addPharmacyOption("Farmasi Murni @ Ayer Keroh");

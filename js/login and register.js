@@ -46,7 +46,31 @@ function hidden_login_and_register() {
     }, time_to_hidden_all);
 }
 
-function validation() {
+function loginValidation(event) {
+    var email = document.getElementById('email').value;
+    var password = document.getElementById('password').value;
+
+    var loginEmailErr = loginPasswordErr = false;
+
+    // Validate email
+    if (email === "") {
+        printError("loginEmailErr", "Please enter your email address");
+        loginEmailErr = true;
+    }
+
+    // Validate password
+    if (password === "") {
+        printError("loginPasswordErr", "Please enter your password");
+        loginPasswordErr = true;
+    }
+
+    if (loginEmailErr || loginPasswordErr) {
+        event.preventDefault();
+    }
+}
+
+
+function validation(event) {
     var name = document.getElementById('name').value;
     var birthDate = document.getElementById('birthDate').value;
     var icNumber = document.getElementById('icNumber').value;
@@ -54,11 +78,7 @@ function validation() {
     var email = document.getElementById('email').value;
     var password = document.getElementById('password').value;
 
-    //construct value form inputbox into json
-    var acc = { 'name': name, 'birthDate': birthDate, 'icNumber': icNumber, 'contactNumber': contactNumber, 'email': email, 'password': password} 
-
-    var nameErr = birthDateErr = icNumberErr = contactNumberErr = emailErr = passwordErr = true; // define error variables with a default value
-    //true means gt error and show error message
+    var nameErr = birthDateErr = icNumberErr = contactNumberErr = emailErr = passwordErr = true;
 
     // Validate name
     if (name === "") {
@@ -97,7 +117,7 @@ function validation() {
 
     // Validate contact number
     if (contactNumber === "") {
-        printError("contactNumberErr", "Please enter your phone number");
+        printError("contactNumberErr", "Please enter your contact number");
     } else {
         var regex = /^(?:\d{3}[-\s]\d{4} \d{4}|\d{2}[-\s]\d{4} \d{3}|\d{3}[-\s]\d{3} \d{4})$/;
         // At least one digit, at least one space or hyphen, total length between 8 and 11
@@ -137,9 +157,8 @@ function validation() {
     }
 
     if ((nameErr || birthDateErr || icNumberErr || contactNumberErr || emailErr || passwordErr == true)) { // prevent the form submitted if thr are any errors
+        event.preventDefault();
         return false;
-    } else {
-        registerAccount();
     }
 }
 
